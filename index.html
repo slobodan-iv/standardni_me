@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="sr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Merriweather|Tangerine|Caveat" rel="stylesheet">
+    <!-- Bootstrap CSS
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>Стандардни маш. ел.!</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="Pictures/logo3.png" width="90" height="60" class="d-inline-block align-top rounded" alt="M3Design"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Стандардни елементи</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="vratilo.html">Вратило</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="lezaj.html">Лежај</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                Спојнице
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="prirubna_sp.html">Прирубна спојница</a></li>
+                <li><a class="dropdown-item" href="elasticna_sp.html">Еластична спојница</a></li>
+                <li><a class="dropdown-item" href="frikciona_sp.html">Фрикциона спојница</a></li>
+                <li><a class="dropdown-item" href="kardanov_zglob.html">Карданов зглоб</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                Повезани Web site-ови
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="#">Моделирање преносника</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Моделирање зупчастог преносника</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Моделирање слож. склопова и тех. док.</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://slobodan-iv.github.io/modeliranje_i_simulacija_p_r_2022/">Моделирање и сим. пом. рач. шк. 2022/23. год.</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://slobodan-iv.github.io/modeliranje_i_simulacija_p_r/">Моделирање и сим. пом. рач. шк. 2021/22. год.</a>
+                </li>
+                </li>
+                  <a class="dropdown-item" href="https://slobodan-iv.github.io/modeliranje_izborni/">Моделирање и симулација пом. рач. - изб. пр.</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://slobodan-iv.github.io/konstruisanje/">Конструисање</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav><!-- navbar -->
+    <!-- container -->
+    <div class="container">
+      <!-- Content here -->
+      <div>
+        <h1>Моделирање стандардних машинских елемената</h1>
+        <div class="row justify-content-center">
+          <div class="col-12 col-sm-12 col-md-11 col-lg-10">
+            <ul class="nav nav-tabs" id="st_me" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="zakovica-tab" data-bs-toggle="tab" data-bs-target="#zakovica" type="button" role="tab" aria-controls="zakovica" aria-selected="true">Заковица</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="klin-tab" data-bs-toggle="tab" data-bs-target="#klin" type="button" role="tab" aria-controls="klin" aria-selected="true">Клин</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="navrtka-tab" data-bs-toggle="tab" data-bs-target="#navrtka" type="button" role="tab" aria-controls="navrtka" aria-selected="false">Навртка</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="podloska-tab" data-bs-toggle="tab" data-bs-target="#podloska" type="button" role="tab" aria-controls="podloska" aria-selected="false">Подлошка</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="zavrtanj-tab" data-bs-toggle="tab" data-bs-target="#zavrtanj" type="button" role="tab" aria-controls="zavrtanj" aria-selected="false">Завртањ</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="sklop-tab" data-bs-toggle="tab" data-bs-target="#sklop" type="button" role="tab" aria-controls="sklop" aria-selected="false">Склоп</button>
+              </li>
+            </ul>
+            <div class="tab-content" id="st_me_TabContent">
+              <div class="tab-pane fade show active" id="zakovica" role="tabpanel" aria-labelledby="zakovica-tab">
+                <div class="accordion" id="modeliranje_zakovice">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="crtez_zakovice">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_crtez_zakovice" aria-expanded="true" aria-controls="collapse_crtez_zakovice">
+                        Цртеж:
+                      </button>
+                    </h2>
+                    <div id="collapse_crtez_zakovice" class="accordion-collapse collapse show" aria-labelledby="crtez_zakovice" data-bs-parent="#modeliranje_zakovice">
+                      <div class="accordion-body">
+                        <img src="Pictures/Crtezi/Zakovica_10_30.jpg" width="100%" alt="Цртеж заковице">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="T7_59">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T7_59" aria-expanded="true" aria-controls="collapse_T7_59">
+                        Табела 7.59:
+                      </button>
+                    </h2>
+                    <div id="collapse_T7_59" class="accordion-collapse collapse" aria-labelledby="T7_59" data-bs-parent="#modeliranje_zakovice">
+                      <div class="accordion-body">
+                        <img src="Pictures/T7_59.jpg" width="100%" alt="Табела 7.59">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="mic_zakovice">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_mic_zakovice" aria-expanded="true" aria-controls="collapse_mic_zakovice">
+                        Моделирање и израда цртежа:
+                      </button>
+                    </h2>
+                    <div id="collapse_mic_zakovice" class="accordion-collapse collapse" aria-labelledby="mic_zakovice" data-bs-parent="#modeliranje_zakovice">
+                      <p>
+                        На основу података из Т 7.59 израђујемо модел:
+                      </p>
+                      <div class="accordion-body">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/FybdpsdgEcc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="klin" role="tabpanel" aria-labelledby="klin-tab">
+                <div class="accordion" id="modeliranje_klina">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="crtez_klina">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_crtez_klina" aria-expanded="true" aria-controls="collapse_crtez_klina">
+                        Цртеж:
+                      </button>
+                    </h2>
+                    <div id="collapse_crtez_klina" class="accordion-collapse collapse show" aria-labelledby="crtez_klina" data-bs-parent="#modeliranje_klina">
+                      <div class="accordion-body">
+                        <img src="Pictures/Crtezi/Klin_bez_nagiba_14_9_90.jpg" width="100%" alt="Цртеж клина без нагиба">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="T4_7">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T4_7" aria-expanded="true" aria-controls="collapse_T4_7">
+                        Табела 4.7:
+                      </button>
+                    </h2>
+                    <div id="collapse_T4_7" class="accordion-collapse collapse" aria-labelledby="T4_7" data-bs-parent="#modeliranje_klina">
+                      <div class="accordion-body">
+                        <img src="Pictures/T4_7.jpg" width="100%" alt="Табела 4.7">
+                        <p>
+                          Стандардне дужине клинова: 20, 25, 28, 32, 36, 40, 45, 50, 56, 63, 70, 80, 90, 100, 110, 125, 140, 180, 200, ... , 400, а за нормалне клинове и још: 5, 8, 10, 12, 15, 16, 18.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="Sl_4_37">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_Sl_4_37" aria-expanded="true" aria-controls="collapse_Sl_4_37">
+                        Сл. 4.37:
+                      </button>
+                    </h2>
+                    <div id="collapse_Sl_4_37" class="accordion-collapse collapse" aria-labelledby="Sl_4_37" data-bs-parent="#modeliranje_klina">
+                      <div class="accordion-body">
+                        <img src="Pictures/Sl_4_37.jpg" width="100%" alt="Сл. 4.37">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="mic_klina">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_mic_klina" aria-expanded="true" aria-controls="collapse_mic_klina">
+                        Моделирање и израда цртежа:
+                      </button>
+                    </h2>
+                    <div id="collapse_mic_klina" class="accordion-collapse collapse" aria-labelledby="mic_klina" data-bs-parent="#modeliranje_klina">
+                      <p>
+                        На основу података из Т 4.7 израђујемо модел:
+                      </p>
+                      <div class="accordion-body">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/cpn-_tlQFMo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="navrtka" role="tabpanel" aria-labelledby="navrtka-tab">
+                <div class="accordion" id="modeliranje_navrtke">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="crtez_navrtke">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_crtez_navrtke" aria-expanded="true" aria-controls="collapse_crtez_navrtke">
+                        Цртеж:
+                      </button>
+                    </h2>
+                    <div id="collapse_crtez_navrtke" class="accordion-collapse collapse show" aria-labelledby="crtez_navrtke" data-bs-parent="#modeliranje_navrtke">
+                      <div class="accordion-body">
+                        <img src="Pictures/Crtezi/Navrtka_M12.jpg" width="100%" alt="Цртеж навртке">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="T7_48">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T7_48" aria-expanded="true" aria-controls="collapse_T7_48">
+                        Табела 7.48:
+                      </button>
+                    </h2>
+                    <div id="collapse_T7_48" class="accordion-collapse collapse" aria-labelledby="T7_48" data-bs-parent="#modeliranje_navrtke">
+                      <div class="accordion-body">
+                        <img src="Pictures/T7_48.jpg" width="100%" alt="Табела 7.48">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="mic_navrtke">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_mic_navrtke" aria-expanded="true" aria-controls="collapse_mic_navrtke">
+                        Моделирање и израда цртежа:
+                      </button>
+                    </h2>
+                    <div id="collapse_mic_navrtke" class="accordion-collapse collapse" aria-labelledby="mic_navrtke" data-bs-parent="#modeliranje_navrtke">
+                      <p>
+                        На основу података из Т 7.48 израђујемо модел:
+                      </p>
+                      <div class="accordion-body">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/ua--n5kSMiQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="podloska" role="tabpanel" aria-labelledby="podloska-tab">
+                <div class="accordion" id="modeliranje_podloske">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="crtez_podloske">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_crtez_podloske" aria-expanded="true" aria-controls="collapse_crtez_podloske">
+                        Цртеж:
+                      </button>
+                    </h2>
+                    <div id="collapse_crtez_podloske" class="accordion-collapse collapse show" aria-labelledby="crtez_podloske" data-bs-parent="#modeliranje_podloske">
+                      <div class="accordion-body">
+                        <img src="Pictures/Crtezi/Podloska_12.jpg" width="100%" alt="Цртеж подлошке">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="T7_50">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T7_50" aria-expanded="true" aria-controls="collapse_T7_50">
+                        Табела 7.50:
+                      </button>
+                    </h2>
+                    <div id="collapse_T7_50" class="accordion-collapse collapse" aria-labelledby="T7_50" data-bs-parent="#modeliranje_podloske">
+                      <div class="accordion-body">
+                        <img src="Pictures/T7_50.jpg" width="100%" alt="Табела 7.50">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="mic_podloske">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_mic_podloske" aria-expanded="true" aria-controls="collapse_mic_podloske">
+                        Моделирање и израда цртежа:
+                      </button>
+                    </h2>
+                    <div id="collapse_mic_podloske" class="accordion-collapse collapse" aria-labelledby="mic_podloske" data-bs-parent="#modeliranje_podloske">
+                      <p>
+                        На основу података из Т 7.50 израђујемо модел:
+                      </p>
+                      <div class="accordion-body">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/Xba0vHwbkOw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="zavrtanj" role="tabpanel" aria-labelledby="zavrtanj-tab">
+                <div class="accordion" id="modeliranje_zavrtnja">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="crtez_zavrtnja">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_crtez_zavrtnja" aria-expanded="true" aria-controls="collapse_crtez_zavrtnja">
+                        Цртеж:
+                      </button>
+                    </h2>
+                    <div id="collapse_crtez_zavrtnja" class="accordion-collapse collapse show" aria-labelledby="crtez_zavrtnja" data-bs-parent="#modeliranje_zavrtnja">
+                      <div class="accordion-body">
+                        <img src="Pictures/Crtezi/Zavrtanj_M12.jpg" width="100%" alt="Цртеж завртња">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="T7_43">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T7_43" aria-expanded="true" aria-controls="collapse_T7_43">
+                        Табела 7.43:
+                      </button>
+                    </h2>
+                    <div id="collapse_T7_43" class="accordion-collapse collapse" aria-labelledby="T7_43" data-bs-parent="#modeliranje_zavrtnja">
+                      <div class="accordion-body">
+                        <img src="Pictures/T7_43.jpg" width="100%" alt="Табела 7.43">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="mic_zavrtnja">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_mic_zavrtnja" aria-expanded="true" aria-controls="collapse_mic_zavrtnja">
+                        Моделирање и израда цртежа:
+                      </button>
+                    </h2>
+                    <div id="collapse_mic_zavrtnja" class="accordion-collapse collapse" aria-labelledby="mic_zavrtnja" data-bs-parent="#modeliranje_zavrtnja">
+                      <p>
+                        На основу података из Т 7.43 израђујемо модел:
+                      </p>
+                      <div class="accordion-body">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/881w7Q0U8X4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="zavrtanj_konfiguracije">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_zavrtanj_kofiguracije" aria-expanded="true" aria-controls="collapse_zavrtanj_kofiguracije">
+                        Подешени завртањ и конфигурације:
+                      </button>
+                    </h2>
+                    <div id="collapse_zavrtanj_kofiguracije" class="accordion-collapse collapse" aria-labelledby="zavrtanj_konfiguracije" data-bs-parent="#modeliranje_zavrtnja">
+                      <div class="accordion-body">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/YTZhFPrK1oE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="sklop" role="tabpanel" aria-labelledby="sklop-tab">
+                <div class="accordion" id="modeliranje_sklopa">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="crtez_sklopa">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_crtez_sklopa" aria-expanded="true" aria-controls="collapse_crtez_sklopa">
+                        Цртеж:
+                      </button>
+                    </h2>
+                    <div id="collapse_crtez_sklopa" class="accordion-collapse collapse show" aria-labelledby="crtez_sklopa" data-bs-parent="#modeliranje_sklopa">
+                      <div class="accordion-body">
+                        <img src="Pictures/Crtezi/Sklop_znp_M12.jpg" width="100%" alt="Цртеж склопа">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="mic_sklopa">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_mic_sklopa" aria-expanded="true" aria-controls="collapse_mic_sklopa">
+                        Моделирање и израда цртежа:
+                      </button>
+                    </h2>
+                    <div id="collapse_mic_sklopa" class="accordion-collapse collapse" aria-labelledby="mic_sklopa" data-bs-parent="#modeliranje_sklopa">
+                      <p>
+                        Навртку, подлошку и завртањ убацујемо у склоп "Bottom-Up" поступком:
+                      </p>
+                      <div class="accordion-body">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/WSsmFfKdgR0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer -->
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <nav class="card-header" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">&copy; Slobodan Ivković</li>
+                  <li class="breadcrumb-item"><a href="https://www.linkedin.com/in/slobodan-ivkovic-a08326ba"><img src="Pictures/Icons/linkedin.png" alt="linkedin logo"></a></li>
+                  <li class="breadcrumb-item"><a href="https://twitter.com/slobodan_iv"><img src="Pictures/Icons/twitter.png" alt="twitter logo"></a></li>
+                  <li class="breadcrumb-item"><a href="https://www.youtube.com/user/Mickijedini"><img src="Pictures/Icons/youtube.png" alt="youtube logo"></a></li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- container -->
+
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script> -->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>-->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

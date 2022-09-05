@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="sr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Merriweather|Tangerine|Caveat" rel="stylesheet">
+    <!-- Bootstrap CSS
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>Карданов зглоб!</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="Pictures/logo3.png" width="90" height="60" class="d-inline-block align-top rounded" alt="M3Design"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Стандардни елементи</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="vratilo.html">Вратило</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="lezaj.html">Лежај</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                Спојнице
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="prirubna_sp.html">Прирубна спојница</a></li>
+                <li><a class="dropdown-item" href="elasticna_sp.html">Еластична спојница</a></li>
+                <li><a class="dropdown-item" href="frikciona_sp.html">Фрикциона спојница</a></li>
+                <li><a class="dropdown-item active" href="#">Карданов зглоб</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                Повезани Web site-ови
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="#">Моделирање преносника</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Моделирање зупчастог преносника</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Моделирање слож. склопова и тех. док.</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://slobodan-iv.github.io/modeliranje_i_simulacija_p_r_2022/">Моделирање и сим. пом. рач. шк. 2022/23. год.</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://slobodan-iv.github.io/modeliranje_i_simulacija_p_r/">Моделирање и сим. пом. рач. шк. 2021/22. год.</a>
+                </li>
+                </li>
+                  <a class="dropdown-item" href="https://slobodan-iv.github.io/modeliranje_izborni/">Моделирање и симулација пом. рач. - изб. пр.</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://slobodan-iv.github.io/konstruisanje/">Конструисање</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav><!-- navbar -->
+    <!-- container -->
+    <div class="container">
+      <!-- Content here -->
+      <div>
+        <h1>Моделирање и цртежи кардановог зглоба - спојнице</h1>
+        <div class="row justify-content-center">
+          <div class="col-12 col-sm-12 col-md-11 col-lg-10">
+            <div class="accordion" id="modeliranje_i_crtezi_kard_zgloba">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="mod_crtezi_zgloba">
+                  <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_mod_crtezi_zgloba" aria-expanded="true" aria-controls="collapse_mod_crtezi_zgloba">
+                    Моделирање и цртеж зглоба:
+                  </button>
+                </h2>
+                <div id="collapse_mod_crtezi_zgloba" class="accordion-collapse collapse show" aria-labelledby="mod_crtezi_zgloba" data-bs-parent="#modeliranje_i_crtezi_kard_zgloba">
+                  <div class="accordion-body">
+                    <ul class="nav nav-tabs" id="zglob_kardana_Tab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="crtez_zgloba-tab" data-bs-toggle="tab" data-bs-target="#crtez_zgloba" type="button" role="tab" aria-controls="crtez_zgloba" aria-selected="true">Цртеж зглоба</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="mod_zgloba-tab" data-bs-toggle="tab" data-bs-target="#mod_zgloba" type="button" role="tab" aria-controls="mod_zgloba" aria-selected="false">Моделирање</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="izrada_crteza_zgloba-tab" data-bs-toggle="tab" data-bs-target="#izrada_crteza_zgloba" type="button" role="tab" aria-controls="izrada_crteza_zgloba" aria-selected="false">Израда цртежа</button>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="zglob_kardana_TabContent">
+                      <div class="tab-pane show active" id="crtez_zgloba" role="tabpanel" aria-labelledby="crtez_zgloba-tab">
+                        <img src="Pictures/Crtezi/Zglob.jpg" width="100%" alt="Цртеж зглоба">
+                      </div>
+                      <div class="tab-pane" id="mod_zgloba" role="tabpanel" aria-labelledby="mod_zgloba-tab">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/Z6VDObSAy2o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                      <div class="tab-pane" id="izrada_crteza_zgloba" role="tabpanel" aria-labelledby="izrada_crteza_zgloba-tab">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/vscSZJ36wJ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="mod_i_crtez_krsta_kardana">
+                  <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_mod_i_crtez_krsta_kardana" aria-expanded="true" aria-controls="collapse_mod_i_crtez_krsta_kardana">
+                    Моделирање и цртеж крста кардана:
+                  </button>
+                </h2>
+                <div id="collapse_mod_i_crtez_krsta_kardana" class="accordion-collapse collapse" aria-labelledby="mod_i_crtez_krsta_kardana" data-bs-parent="#modeliranje_i_crtezi_kard_zgloba">
+                  <div class="accordion-body">
+                    <ul class="nav nav-tabs" id="krst_kardana_Tab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="crtez_krsta_kardana-tab" data-bs-toggle="tab" data-bs-target="#crtez_krsta_kardana" type="button" role="tab" aria-controls="crtez_krsta_kardana" aria-selected="true">Цртеж крста кардана</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="mod_krsta_kardana-tab" data-bs-toggle="tab" data-bs-target="#mod_krsta_kardana" type="button" role="tab" aria-controls="mod_krsta_kardana" aria-selected="false">Моделирање</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="izrada_crteza_krsta_kardana-tab" data-bs-toggle="tab" data-bs-target="#izrada_crteza_krsta_kardana" type="button" role="tab" aria-controls="izrada_crteza_krsta_kardana" aria-selected="false">Израда цртежа</button>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="krst_kardana_TabContent">
+                      <div class="tab-pane show active" id="crtez_krsta_kardana" role="tabpanel" aria-labelledby="crtez_krsta_kardana-tab">
+                        <img src="Pictures/Crtezi/Krst_kardana.jpg" width="100%" alt="Цртеж крста кардана">
+                      </div>
+                      <div class="tab-pane" id="mod_krsta_kardana" role="tabpanel" aria-labelledby="mod_krsta_kardana-tab">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/HXIrfYFLp2A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                      <div class="tab-pane" id="izrada_crteza_krsta_kardana" role="tabpanel" aria-labelledby="izrada_crteza_krsta_kardana-tab">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/TWWhPGFyf-k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="mod_i_crtez_caure">
+                  <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_mod_i_crtez_caure" aria-expanded="true" aria-controls="collapse_mod_i_crtez_caure">
+                    Моделирање и цртеж чауре:
+                  </button>
+                </h2>
+                <div id="collapse_mod_i_crtez_caure" class="accordion-collapse collapse" aria-labelledby="mod_i_crtez_caure" data-bs-parent="#modeliranje_i_crtezi_kard_zgloba">
+                  <div class="accordion-body">
+                    <ul class="nav nav-tabs" id="caura_Tab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="crtez_caure-tab" data-bs-toggle="tab" data-bs-target="#crtez_caure" type="button" role="tab" aria-controls="crtez_caure" aria-selected="true">Цртеж чауре</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="mod_i_izrada_crteza_caure-tab" data-bs-toggle="tab" data-bs-target="#mod_i_izrada_crteza_caure" type="button" role="tab" aria-controls="mod_i_izrada_crteza_caure" aria-selected="false">Моделирање и израда цртежа</button>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="caura_TabContent">
+                      <div class="tab-pane show active" id="crtez_caure" role="tabpanel" aria-labelledby="crtez_caure-tab">
+                        <img src="Pictures/Crtezi/Caura_kardana.jpg" width="100%" alt="Цртеж чауре">
+                      </div>
+                      <div class="tab-pane" id="mod_i_izrada_crteza_caure" role="tabpanel" aria-labelledby="mod_i_izrada_crteza_caure-tab">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/XtP-3eS0pdQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="mod_i_crtez_uskocnika">
+                  <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_mod_i_crtez_uskocnika" aria-expanded="true" aria-controls="collapse_mod_i_crtez_uskocnika">
+                    Моделирање и цртеж ускочника:
+                  </button>
+                </h2>
+                <div id="collapse_mod_i_crtez_uskocnika" class="accordion-collapse collapse" aria-labelledby="mod_i_crtez_uskocnika" data-bs-parent="#modeliranje_i_crtezi_kard_zgloba">
+                  <div class="accordion-body">
+                    <ul class="nav nav-tabs" id="uskocnik_Tab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="crtez_uskocnika-tab" data-bs-toggle="tab" data-bs-target="#crtez_uskocnika" type="button" role="tab" aria-controls="crtez_uskocnika" aria-selected="true">Цртеж ускочника</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="mod_i_izrada_crteza_uskocnika-tab" data-bs-toggle="tab" data-bs-target="#mod_i_izrada_crteza_uskocnika" type="button" role="tab" aria-controls="mod_i_izrada_crteza_uskocnika" aria-selected="false">Моделирање и израда цртежа</button>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="uskocnik_TabContent">
+                      <div class="tab-pane show active" id="crtez_uskocnika" role="tabpanel" aria-labelledby="crtez_uskocnika-tab">
+                        <img src="Pictures/Crtezi/Uskocnik.jpg" width="100%" alt="Цртеж ускочника">
+                      </div>
+                      <div class="tab-pane" id="mod_i_izrada_crteza_uskocnika" role="tabpanel" aria-labelledby="mod_i_izrada_crteza_uskocnika-tab">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/vL5v7YufovI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="mod_sklopa_kardana">
+                  <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_mod_sklopa_kardana" aria-expanded="true" aria-controls="collapse_mod_sklopa_kardana">
+                    Моделирање и цртеж склопа кардановог зглоба:
+                  </button>
+                </h2>
+                <div id="collapse_mod_sklopa_kardana" class="accordion-collapse collapse" aria-labelledby="mod_sklopa_kardana" data-bs-parent="#modeliranje_i_crtezi_kard_zgloba">
+                  <div class="accordion-body">
+                    <ul class="nav nav-tabs" id="sklop_kardana_Tab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="crtez_kardanovog_zgloba-tab" data-bs-toggle="tab" data-bs-target="#crtez_kardanovog_zgloba" type="button" role="tab" aria-controls="crtez_kardanovog_zgloba" aria-selected="true">Цртеж склопа</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="mod_sklopa-tab" data-bs-toggle="tab" data-bs-target="#mod_sklopa" type="button" role="tab" aria-controls="mod_sklopa" aria-selected="false">Моделирање</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="izrada_crteza_sklopa-tab" data-bs-toggle="tab" data-bs-target="#izrada_crteza_sklopa" type="button" role="tab" aria-controls="izrada_crteza_sklopa" aria-selected="false">Израда цртежа</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="zip_sklopa-tab" data-bs-toggle="tab" data-bs-target="#zip_sklopa" type="button" role="tab" aria-controls="zip_sklopa" aria-selected="false">"Zip" склопа</button>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="sklop_kardana_TabContent">
+                      <div class="tab-pane show active" id="crtez_kardanovog_zgloba" role="tabpanel" aria-labelledby="crtez_kardanovog_zgloba-tab">
+                        <img src="Pictures/Crtezi/Kardanov_zglob.jpg" width="100%" alt="Цртеж склопа">
+                      </div>
+                      <div class="tab-pane" id="mod_sklopa" role="tabpanel" aria-labelledby="mod_sklopa-tab">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/qwWmXe2_TFI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                      <div class="tab-pane" id="izrada_crteza_sklopa" role="tabpanel" aria-labelledby="izrada_crteza_sklopa-tab">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/iJHXTADhxrY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                      <div class="tab-pane" id="zip_sklopa" role="tabpanel" aria-labelledby="zip_sklopa-tab">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/7ui33O8MczM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="animacija">
+                  <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_animacija" aria-expanded="true" aria-controls="collapse_animacija">
+                    Карданов зглоб - анимација и принцип рада:
+                  </button>
+                </h2>
+                <div id="collapse_animacija" class="accordion-collapse collapse" aria-labelledby="animacija" data-bs-parent="#modeliranje_i_crtezi_kard_zgloba">
+                  <div class="accordion-body">
+                    <ul class="nav nav-tabs" id="animacija_kardana_Tab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="animacija_kardanovog_zgloba-tab" data-bs-toggle="tab" data-bs-target="#animacija_kardanovog_zgloba" type="button" role="tab" aria-controls="animacija_kardanovog_zgloba" aria-selected="true">Анимација склопа</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="animacija_sklopa_realview_graphics-tab" data-bs-toggle="tab" data-bs-target="#animacija_sklopa_realview_graphics" type="button" role="tab" aria-controls="animacija_sklopa_realview_graphics" aria-selected="false">Анимација склопа - "RealView Graphics"</button>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="animacija_kardana_TabContent">
+                      <div class="tab-pane show active" id="animacija_kardanovog_zgloba" role="tabpanel" aria-labelledby="animacija_kardanovog_zgloba-tab">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/nU48435d85k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                      <div class="tab-pane" id="animacija_sklopa_realview_graphics" role="tabpanel" aria-labelledby="animacija_sklopa_realview_graphics-tab">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/1lIYnUhPlho" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer -->
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <nav class="card-header" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">&copy; Slobodan Ivković</li>
+                  <li class="breadcrumb-item"><a href="https://www.linkedin.com/in/slobodan-ivkovic-a08326ba"><img src="Pictures/Icons/linkedin.png" alt="linkedin logo"></a></li>
+                  <li class="breadcrumb-item"><a href="https://twitter.com/slobodan_iv"><img src="Pictures/Icons/twitter.png" alt="twitter logo"></a></li>
+                  <li class="breadcrumb-item"><a href="https://www.youtube.com/user/Mickijedini"><img src="Pictures/Icons/youtube.png" alt="youtube logo"></a></li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- container -->
+
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script> -->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>-->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

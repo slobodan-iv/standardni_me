@@ -1,0 +1,2030 @@
+<!doctype html>
+<html lang="sr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Merriweather|Tangerine|Caveat" rel="stylesheet">
+    <!-- Bootstrap CSS
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>Фрикциона спојница!</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="Pictures/logo3.png" width="90" height="60" class="d-inline-block align-top rounded" alt="M3Design"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Стандардни елементи</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="vratilo.html">Вратило</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="lezaj.html">Лежај</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                Спојнице
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="prirubna_sp.html">Прирубна спојница</a></li>
+                <li><a class="dropdown-item" href="elasticna_sp.html">Еластична спојница</a></li>
+                <li><a class="dropdown-item active" href="#">Фрикциона спојница</a></li>
+                <li><a class="dropdown-item" href="kardanov_zglob.html">Карданов зглоб</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                Повезани Web site-ови
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="#">Моделирање преносника</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Моделирање зупчастог преносника</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Моделирање слож. склопова и тех. док.</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://slobodan-iv.github.io/modeliranje_i_simulacija_p_r_2022/">Моделирање и сим. пом. рач. шк. 2022/23. год.</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://slobodan-iv.github.io/modeliranje_i_simulacija_p_r/">Моделирање и сим. пом. рач. шк. 2021/22. год.</a>
+                </li>
+                </li>
+                  <a class="dropdown-item" href="https://slobodan-iv.github.io/modeliranje_izborni/">Моделирање и симулација пом. рач. - изб. пр.</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://slobodan-iv.github.io/konstruisanje/">Конструисање</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav><!-- navbar -->
+    <!-- container -->
+    <div class="container">
+      <!-- Content here -->
+      <div>
+        <h1>Прорачун моделирање и цртежи фрикционе спојнице</h1>
+        <div class="row justify-content-center">
+          <div class="col-12 col-sm-12 col-md-11 col-lg-10">
+            <ul class="nav nav-tabs" id="fr_spojnica" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="postavka-tab" data-bs-toggle="tab" data-bs-target="#postavka" type="button" role="tab" aria-controls="postavka" aria-selected="true">Поставка задатка</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="proracun-tab" data-bs-toggle="tab" data-bs-target="#proracun" type="button" role="tab" aria-controls="proracun" aria-selected="true">Прорачун</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="frikciona_spojnica-tab" data-bs-toggle="tab" data-bs-target="#frikciona_spojnica" type="button" role="tab" aria-controls="frikciona_spojnica" aria-selected="false">Моделирање и цртежи фрикционе спојнице</button>
+              </li>
+            </ul>
+            <div class="tab-content" id="fr_sp_TabContent">
+              <div class="tab-pane fade show active" id="postavka" role="tabpanel" aria-labelledby="postavka-tab">
+                <div class="accordion" id="postavka_zadatka">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="sema_fr_sp">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_sema_fr_sp" aria-expanded="true" aria-controls="collapse_sema_fr_sp">
+                        Шема фрикционе спојнице:
+                      </button>
+                    </h2>
+                    <div id="collapse_sema_fr_sp" class="accordion-collapse collapse show" aria-labelledby="sema_fr_sp" data-bs-parent="#postavka_zadatka">
+                      <div class="accordion-body">
+                        <img src="Pictures/Sema_fr_spojnice.jpg" width="100%" alt="Шема фрикционе спојнице">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="ul_podaci">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_ul_podaci" aria-expanded="true" aria-controls="collapse_ul_podaci">
+                        Улазни подаци:
+                      </button>
+                    </h2>
+                    <div id="collapse_ul_podaci" class="accordion-collapse collapse" aria-labelledby="ul_podaci" data-bs-parent="#postavka_zadatka">
+                      <div class="accordion-body">
+                        <p>
+                          Израчунати потребне параметре и моделирати фрикциону спојницу на основу улазних података:
+                        </p>
+                        <p>
+                          Снага на вратилу спојнице: <img src="Pictures/png/P=.png" alt="P="> 12 <img src="Pictures/png/kW.png" alt="kW">
+                        </p>
+                        <p>
+                          Број обртаја вратила спојнице: <img src="Pictures/png/n=.png" alt="n="> 900 <img src="Pictures/png/min_1.png" alt="min-1">
+                        </p>
+                        <p>
+                          Фактор спољних динамичких сила: <img src="Pictures/png/KA=.png" alt="&xi;KA="> 1.25
+                        </p>
+                        <p>
+                          Материјал вратила: Č.0545
+                        </p>
+                        <p>
+                          Материјал унутрашњих ламела: каљен челик
+                        </p>
+                        <p>
+                          Материјал спољашњих ламела: каљен челик са облогом од синтерованог метала
+                        </p>
+                        <p>
+                          Површине: подмазане прскањем
+                        </p>
+                        <p>
+                          Степен сигурности против клизања: <img src="Pictures/png/s_mi=.png" alt="S&mu;="> 1.1 до 1.6
+                        </p>
+                        <p>
+                          Излазни пречник вратила електромотора: <img src="Pictures/png/d_e=.png" alt="de="> 55 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          Веза вратила и главчине остварена је: клином
+                        </p>
+                        <p>
+                          Пречници вратила која се спајају спојницом су једнаки по димензијама.
+                        </p>
+                        <h2>Потребно је:</h2>
+                        <ol>
+                          <li>
+                            Прорачунати основне делове фрикционе спојнице,
+                          </li>
+                          <li>
+                            Моделирати делове и склоп фрикционе спојнице,
+                          </li>
+                          <li>
+                            Израдити радионичке цртеже делова и цртеж склопа спојнице са саставницом,
+                          </li>
+                          <li>
+                             Дати технички опис конструкције с освртом на стандардне делове и делове које треба израдити, као и на начин одржавања.
+                          </li>
+                        </ol>
+                        <h3>
+                          Литература - извор знања:
+                        </h3>
+                        <ul>
+                          <li>
+                            Машински елементи I - Спасоје Драпић
+                          </li>
+                          <li>
+                            Машински елементи II - Спасоје Драпић
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="animacija">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_animacija" aria-expanded="true" aria-controls="collapse_animacija">
+                        Фрикциона спојница - принцип рада и анимација:
+                      </button>
+                    </h2>
+                    <div id="collapse_animacija" class="accordion-collapse collapse" aria-labelledby="animacija" data-bs-parent="#postavka_zadatka">
+                      <div class="accordion-body">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/npoMby1bZJA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="download">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_download" aria-expanded="true" aria-controls="collapse_download">
+                        Download докумената:
+                      </button>
+                    </h2>
+                    <div id="collapse_download" class="accordion-collapse collapse" aria-labelledby="download" data-bs-parent="#postavka_zadatka">
+                      <div class="accordion-body">
+                        <p>
+                          <a href="static/Frikciona_spojnica_proracun.xls">"Excel"-ов документ, прорачун без вредности - download</a>
+                        </p>
+                        <p>
+                          <a href="static/Frikciona_spojnica_proracun.pdf">"PDF" документ, пример прорачуна - download</a>
+                        </p>
+                        <p>
+                          <a href="static/Tablice_frikciona_spojnica.pdf">"PDF" документ, табеле уз прорачун - download</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="proracun" role="tabpanel" aria-labelledby="proracun-tab">
+                <div class="accordion" id="proracun_fr_spojnice">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="merodavni_obrtni_moment">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_merodavni_obrtni_moment" aria-expanded="true" aria-controls="collapse_merodavni_obrtni_moment">
+                        Меродавни обртни момент:
+                      </button>
+                    </h2>
+                    <div id="collapse_merodavni_obrtni_moment" class="accordion-collapse collapse show" aria-labelledby="merodavni_obrtni_moment" data-bs-parent="#proracun_fr_spojnice">
+                      <div class="accordion-body">
+                        <p>
+                          <strong>Снага</strong> на вратилу спојнице: <img src="Pictures/png/P=.png" alt="P="> 12 <img src="Pictures/png/kW.png" alt="kW">
+                        </p>
+                        <p>
+                          <strong>Број обртаја</strong> вратила спојнице: <img src="Pictures/png/n=.png" alt="n="> 900 <img src="Pictures/png/min_1.png" alt="min-1">
+                        </p>
+                        <p>
+                          <strong>
+                            Угаона брзина: 
+                          </strong>
+                          <img src="Pictures/png/ug_brzina=.png" alt="&omega;="> 94.248 <img src="Pictures/png/rad_s.png" alt="rad/s">
+                        </p>
+                        <p>
+                          <strong>
+                            Обртни момент: 
+                          </strong>
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/T_KA=.png" alt="T*KA="> 0.159154943 <img src="Pictures/png/kNm.png" alt="kNm">
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/T_KA=.png" alt="T*KA="> 159154.943 <img src="Pictures/png/Nmm.png" alt="Nmm">
+                        </p>
+                        <div class="accordion" id="accordion_T2_3">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_T2_3">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T2_3" aria-expanded="true" aria-controls="collapse_T2_3">
+                                Т2.3 - Механичке карактеристике
+                              </button>
+                            </h2>
+                            <div id="collapse_T2_3" class="accordion-collapse collapse" aria-labelledby="heading_T2_3" data-bs-parent="#accordion_T2_3">
+                              <div class="accordion-body">
+                                <img src="Pictures/T2_3.jpg" width="100%" alt="T2.3">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          За материјал вратила-обода спојнице (по поставци задатка) <strong>Č.0545</strong> из Т 2.3 М.Е.I усвајамо <strong>трајну динамичку чврстоћу</strong> на једносмерну промену напона за случај увијања:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/tau_D0=.png" alt="&tau;(D0)="> 170 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <p>
+                          <strong>
+                            Дозвољени напон увијања 
+                          </strong>
+                          :
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/tau_ud=.png" alt="&tau;ud="> 56.66667 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <p>
+                          <strong>
+                            Степен сигурности 
+                          </strong>
+                          усвајамо из T2.5: <img src="Pictures/png/s_solo=.png" alt="S="> 3
+                        </p>
+                        <div class="accordion" id="accordion_T2_5">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_T2_5">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T2_5" aria-expanded="true" aria-controls="collapse_T2_5">
+                                Т2.5 - Степен сигурности
+                              </button>
+                            </h2>
+                            <div id="collapse_T2_5" class="accordion-collapse collapse" aria-labelledby="heading_T2_5" data-bs-parent="#accordion_T2_5">
+                              <div class="accordion-body">
+                                <img src="Pictures/T2_5.jpg" width="100%" alt="T2.5">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          <strong>
+                            Идеални пречник вратила 
+                          </strong>
+                          :
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/di=.png" alt="di="> 24.275 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          С обзиром да је веза вратила и главчине клином, и да је излазни пречник вратила електромотра: <img src="Pictures/png/d_e=.png" alt="de="> 55 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>
+                            усваја се пречник 
+                          </strong>
+                          прикључног вратила:  <img src="Pictures/png/d_malo=.png" alt="d="> 55 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          Пречник <strong>главчине спојнице</strong> на погонском вратилу
+                          :
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/d_g=.png" alt="dg="> 99 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>усвајам: </strong> <img src="Pictures/png/d_g_solo=.png" alt="dg="> 100 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="dimenzije_lamela">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_dimenzije_lamela" aria-expanded="true" aria-controls="collapse_dimenzije_lamela">
+                        Димензије ламела:
+                      </button>
+                    </h2>
+                    <div id="collapse_dimenzije_lamela" class="accordion-collapse collapse" aria-labelledby="dimenzije_lamela" data-bs-parent="#proracun_fr_spojnice">
+                      <div class="accordion-body">
+                        <p>
+                          <strong>
+                            Унутрашњи пречник 
+                          </strong>
+                          : 
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/du_lamele=.png" alt="du="> (110 до 126.5) <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>
+                            Спољашњи пречник
+                          </strong>
+                          :
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/ds_lamele=.png" alt="ds="> (192.5 до 220) <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          Усвајају се за
+                          <strong>
+                            погонску ламелу
+                          </strong>
+                          следеће димензије: &Oslash;210/&Oslash;120x3
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/dsp=.png" alt="dsp="> 210 <img src="Pictures/png/mm.png" alt="mm"> <img src="Pictures/png/dup=.png" alt="dup="> 120 <img src="Pictures/png/mm.png" alt="mm"> <img src="Pictures/png/delta=.png" alt="&delta;="> 3 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/rsp=.png" alt="rsp="> 105 <img src="Pictures/png/mm.png" alt="mm"> <img src="Pictures/png/rup=.png" alt="rup="> 60 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          Усвајају се за
+                          <strong>
+                            гоњену ламелу
+                          </strong>
+                          следеће димензије: &Oslash;200/&Oslash;110x3
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/dsg=.png" alt="dsg="> 200 <img src="Pictures/png/mm.png" alt="mm"> <img src="Pictures/png/dug=.png" alt="dug="> 110 <img src="Pictures/png/mm.png" alt="mm"> <img src="Pictures/png/delta=.png" alt="&delta;="> 3 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/rsg=.png" alt="rsg="> 100 <img src="Pictures/png/mm.png" alt="mm"> <img src="Pictures/png/rug=.png" alt="rug="> 55 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="br_tp_i_lamela">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_br_tp_i_lamela" aria-expanded="true" aria-controls="collapse_br_tp_i_lamela">
+                        Број тарних површина и број ламела:
+                      </button>
+                    </h2>
+                    <div id="collapse_br_tp_i_lamela" class="accordion-collapse collapse" aria-labelledby="br_tp_i_lamela" data-bs-parent="#proracun_fr_spojnice">
+                      <div class="accordion-body">
+                        <p>
+                          Гранични 
+                          <strong>
+                            обртни момент  
+                          </strong>
+                          који спојница може да пренесе:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/gr_T.png" alt="i*Fn*&mu;*r&mu;>=S&mu;*KA*T">
+                        </p>
+                        <p>
+                          <strong>
+                            средњи полупречник 
+                          </strong>момента трења се рачуна:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/r_mi=.png" alt="r&mu;="> 81.667 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          по поставци задатка:
+                          <img src="Pictures/png/s_mi=.png" alt="S&mu;="> 1.2
+                        </p>
+                        <div class="accordion" id="accordion_T7_161">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_T7_161">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T7_161" aria-expanded="true" aria-controls="collapse_T7_161">
+                                Т7.161
+                              </button>
+                            </h2>
+                            <div id="collapse_T7_161" class="accordion-collapse collapse" aria-labelledby="heading_T7_161" data-bs-parent="#accordion_T7_161">
+                              <div class="accordion-body">
+                                <img src="Pictures/T7_161.jpg" width="100%" alt="Табела 7.161">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          Коефицијент отпора клизању за тарне површине из Т 7.161 износи:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/mi=.png" alt="&mu;="> 0.06 до 0.11 за каљен челик по синтерованом металу и подмазивање прскањем
+                        </p>
+                        <p>
+                          <strong>
+                            усвајам
+                          </strong>:
+                          <img src="Pictures/png/mi=.png" alt="&mu;="> 0.06
+                        </p>
+                        <p>
+                          Потребна вредност <strong>нормалне силе</strong> притиска на ламеле износи:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/Fn.png" alt="Fn">
+                        </p>
+                        <p>
+                          Непознат је број тарних површина: <img src="Pictures/png/i.png" alt="i">
+                        </p>
+                        <p>
+                          <strong>Површински притисак</strong> на додирним површинама ограниченим спољашњим полупречником <img src="Pictures/png/rsg=.png" alt="rsg="> 100 <img src="Pictures/png/mm.png" alt="mm"> и унутрашњим <img src="Pictures/png/rup=.png" alt="rup="> 60 <img src="Pictures/png/mm.png" alt="mm"> се рачуна:
+                        </p>
+                        <p class="left_padding">
+                           <img src="Pictures/png/p_manje_pd_frsp.png" alt="p<=pdoz">
+                        </p>
+                        <p>
+                          <strong>
+                            Тарна површина
+                          </strong>:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/A_fr_sp=.png" alt="A="> 20106.193 <img src="Pictures/png/mm2.png" alt="mm^2">
+                        </p>
+                        <p>
+                          <strong>Дозвољени</strong> површински притисак - Т 7.161:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/pdoz=.png" alt="pdoz="> 0.5 до 2 <img src="Pictures/png/N_mm2.png" alt="N/mm^2">
+                        </p>
+                        <p>
+                          <strong>
+                            усвајам
+                          </strong>: <img src="Pictures/png/pdoz=.png" alt="pdoz="> 0.5 <img src="Pictures/png/N_mm2.png" alt="N/mm^2">
+                        </p>
+                        <p>
+                          Заменом израза за нормалну силу у једначину за површински притисак можемо да одредимо број тарних површина:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/i=.png" alt="i="> 3.877
+                        </p>
+                        <p>
+                          <strong>
+                            усвајам
+                          </strong>: <img src="Pictures/png/i_solo=.png" alt="i="> 4 тарних површина!
+                        </p>
+                        <p>
+                          Потребна вредност <strong>нормалне силе</strong> притиска износи:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/Fn=.png" alt="Fn="> 9744.18 <img src="Pictures/png/N.png" alt="N">
+                        </p>
+                        <p>
+                          број 
+                          <strong>
+                            унутрашњих
+                          </strong> 
+                          ламела: 
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/z1=.png" alt="z1="> 2 - гоњених дискова
+                        </p>
+                        <p>
+                          број 
+                          <strong>
+                            спољашњих
+                          </strong> 
+                          ламела: 
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/z2=.png" alt="z2="> 3 - погонских дискова
+                        </p>
+                        <p>
+                          <strong>
+                            Површински притисак
+                          </strong>
+                          : 
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/p_fr_sp=.png" alt="p="> 0.485 <img src="Pictures/png/N_mm2.png" alt="N/mm^2">
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="zlebni_spoj_na_lamelama">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_zlebni_spoj_na_lamelama" aria-expanded="true" aria-controls="collapse_zlebni_spoj_na_lamelama">
+                        Жлебни спој на ламелама:
+                      </button>
+                    </h2>
+                    <div id="collapse_zlebni_spoj_na_lamelama" class="accordion-collapse collapse" aria-labelledby="zlebni_spoj_na_lamelama" data-bs-parent="#proracun_fr_spojnice">
+                      <div class="accordion-body">
+                        <p>
+                          <strong>
+                            Погонска  
+                          </strong>
+                          ламела:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/dsp=.png" alt="dsp="> 210 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>
+                            Гранична вредност
+                          </strong> за подножни пречник ожлебљења је:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/dsg=.png" alt="dsg="> 200 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          Усвајам пречник 
+                          <strong>
+                            подножне кружнице 
+                          </strong>за жлебни профил погонске ламеле:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/dfp=.png" alt="dfp="> 202 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p> 
+                          Обимна сила делује на 
+                          <strong>
+                            средњем
+                          </strong> 
+                          пречнику:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/dsrp=.png" alt="dsrp="> 206 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p> 
+                          Вредност 
+                          <strong>
+                            обимне  
+                          </strong>
+                          силе:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/Ftp=.png" alt="Ftp="> 1545.194 <img src="Pictures/png/N.png" alt="N">
+                        </p>
+                        <p> 
+                          Фактор   
+                          <strong>
+                            неравномерности  
+                          </strong>
+                          расподеле оптерећења:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/ksi_r=.png" alt="&xi;r="> 1.15 до 1.35
+                        </p>
+                        <p class="left_padding">
+                          <strong>
+                            усвајам
+                          </strong>: <img src="Pictures/png/ksi_r=.png" alt="&xi;r="> 1.15
+                        </p>
+                        <p>   
+                          <strong>
+                            корисна дужина бокова се 
+                          </strong>
+                           рачуна на основу усвојене дебљине ламеле, при чему се узима у обзир слој синтерованог метала са сваке стране ламеле у вредности: 0.5 <img src="Pictures/png/mm.png" alt="mm"> а не улази у димензије жлебног споја:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/delta_fr_sp=.png" alt="&delta;="> 3 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/lk_solo=.png" alt="lk="> 2 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>
+                            Висина озубљења 
+                          </strong>
+                          погонске ламеле:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/hp=.png" alt="hp="> 4 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>
+                             Површински притисак 
+                          </strong>
+                          на боковима жлебног профила се рачуна:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/p_zleba.png" alt="p<=pd">
+                        </p>
+                        <p>
+                          Дозвољени
+                          <strong>
+                             површински притисак 
+                          </strong>
+                          :
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/pdoz=.png" alt="pdoz="> 100 до 120 <img src="Pictures/png/N_mm2.png" alt="N/mm^2">
+                        </p>
+                        <p class="left_padding">
+                          <strong>
+                            усвајам
+                          </strong>
+                          : <img src="Pictures/png/pdoz=.png" alt="pdoz="> 100 <img src="Pictures/png/N_mm2.png" alt="N/mm^2"> - стр. 96. M.E.I.
+                        </p>
+                        <div class="accordion" id="accordion_str_96">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_str_96">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_str_96" aria-expanded="true" aria-controls="collapse_str_96">
+                                Стр. 96. M.E.I.
+                              </button>
+                            </h2>
+                            <div id="collapse_str_96" class="accordion-collapse collapse" aria-labelledby="heading_str_96" data-bs-parent="#accordion_str_96">
+                              <div class="accordion-body">
+                                <img src="Pictures/Str_96.jpg" width="100%" alt="Стр. 96. M.E.I.">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          Број 
+                          <strong>
+                            жлебних профила 
+                          </strong>
+                          на погонској ламели:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/z_fr_sp=.png" alt="z="> 0.740
+                        </p>
+                        <p>
+                          <strong>
+                            усвајам
+                          </strong>:
+                          <img src="Pictures/png/z=.png" alt="z="> 3 жлебних профила на погонској ламели - Т 4.8. M.E.I!
+                        </p>
+                        <div class="accordion" id="accordion_T4_8">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_T4_8">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T4_8" aria-expanded="true" aria-controls="collapse_T4_8">
+                                Т4.8
+                              </button>
+                            </h2>
+                            <div id="collapse_T4_8" class="accordion-collapse collapse" aria-labelledby="heading_T4_8" data-bs-parent="#accordion_T4_8">
+                              <div class="accordion-body">
+                                <img src="Pictures/T4_8.jpg" width="100%" alt="Табела 4.8">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          <strong>
+                            Површински притисак
+                          </strong>
+                          :
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/p_zleba=.png" alt="p="> 24.680 <img src="Pictures/png/N_mm2.png" alt="N/mm^2"> - задовољава, јер је:<img src="Pictures/png/p_manje_pd.png" alt="p<=pd">
+                        </p>
+                        <p>
+                          <strong>
+                            Напон смицања
+                          </strong>
+                          :
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/tau_s_p=.png" alt="&tau;s="> 9.538 <img src="Pictures/png/N_mm2.png" alt="N/mm^2">
+                        </p>
+                        <div class="accordion" id="accordion_T2_3x1">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_T2_3x1">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T2_3x1" aria-expanded="true" aria-controls="collapse_T2_3x1">
+                                Т2.3 - Механичке карактеристике
+                              </button>
+                            </h2>
+                            <div id="collapse_T2_3x1" class="accordion-collapse collapse" aria-labelledby="heading_T2_3x1" data-bs-parent="#accordion_T2_3x1">
+                              <div class="accordion-body">
+                                <img src="Pictures/T2_3.jpg" width="100%" alt="T2.3">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          <strong>
+                            Из Т 2.3 М.Е.I за Č.1220: 
+                          </strong>
+                          <img src="Pictures/png/ReH=.png" alt="ReH="> 360 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <div class="accordion" id="accordion_T2_5x1">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_T2_5x1">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T2_5x1" aria-expanded="true" aria-controls="collapse_T2_5x1">
+                                Т2.5 - Степен сигурности
+                              </button>
+                            </h2>
+                            <div id="collapse_T2_5x1" class="accordion-collapse collapse" aria-labelledby="heading_T2_5x1" data-bs-parent="#accordion_T2_5x1">
+                              <div class="accordion-body">
+                                <img src="Pictures/T2_5.jpg" width="100%" alt="T2.5">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          <strong>
+                            Степен сигурности 
+                          </strong>
+                          усвајамо из T2.5: <img src="Pictures/png/s_solo=.png" alt="S="> 3
+                        </p>
+                        <p>
+                          <strong>
+                            Дозвољени напон смицања 
+                          </strong>
+                          :
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/tau_sd=.png" alt="&tau;sd="> 96.000 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <p>
+                          <strong>
+                            Напон смицања је мањи од дозвољеног 
+                          </strong>
+                          :
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/tau_s_manje_tau_sd.png" alt="&tau;s<&tau;sd">
+                        </p>
+                        <p>
+                          <strong>
+                            усвајам
+                          </strong>
+                          ширину жлебног профила:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/b=.png" alt="b="> 9 <img src="Pictures/png/mm.png" alt="mm"> - Т 4.8. M.E.I.
+                        </p>
+                        <p>
+                          <strong>
+                            Гоњена  
+                          </strong>
+                          ламела:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/dug=.png" alt="dug="> 110 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>
+                            Гранична вредност
+                          </strong> за горњи пречник ожлебљења је:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/dup=.png" alt="dup="> 120 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          Усвајам 
+                          <strong>
+                            горњи пречник 
+                          </strong>кружнице за жлебни профил гоњене ламеле:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/dag=.png" alt="dag="> 120 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p> 
+                          Обимна сила делује на 
+                          <strong>
+                            средњем
+                          </strong> 
+                          пречнику:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/dsrg=.png" alt="dsrg="> 115 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p> 
+                          Вредност 
+                          <strong>
+                            обимне  
+                          </strong>
+                          силе:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/Ftg=.png" alt="Ftg="> 2767.912 <img src="Pictures/png/N.png" alt="N">
+                        </p>
+                        <p> 
+                          Фактор   
+                          <strong>
+                            неравномерности  
+                          </strong>
+                          расподеле оптерећења:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/ksi_r=.png" alt="&xi;r="> 1.15 до 1.35
+                        </p>
+                        <p class="left_padding">
+                          <strong>
+                            усвајам
+                          </strong>: <img src="Pictures/png/ksi_r=.png" alt="&xi;r="> 1.15
+                        </p>
+                        <p>   
+                          <strong>
+                            корисна дужина бокова се 
+                          </strong>
+                           рачуна на основу усвојене дебљине ламеле, али на гоњеној ламели се не ставља слој синтерованог метала, па је:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/delta_g_l=.png" alt="&delta;="> 3 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>
+                            Висина озубљења 
+                          </strong>
+                          гоњене ламеле:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/hg=.png" alt="hg="> 5 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>
+                             Површински притисак 
+                          </strong>
+                          на боковима жлебног профила се рачуна:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/p_zleba_g.png" alt="p<=pd">
+                        </p>
+                        <p>
+                          Дозвољени
+                          <strong>
+                             површински притисак 
+                          </strong>
+                          :
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/pdoz=.png" alt="pdoz="> 100 до 120 <img src="Pictures/png/N_mm2.png" alt="N/mm^2">
+                        </p>
+                        <p class="left_padding">
+                          <strong>
+                            усвајам
+                          </strong>
+                          : <img src="Pictures/png/pdoz=.png" alt="pdoz="> 100 <img src="Pictures/png/N_mm2.png" alt="N/mm^2"> - стр. 96. M.E.I.
+                        </p>
+                        <div class="accordion" id="accordion_str_96x1">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_str_96x1">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_str_96x1" aria-expanded="true" aria-controls="collapse_str_96x1">
+                                Стр. 96. M.E.I.
+                              </button>
+                            </h2>
+                            <div id="collapse_str_96x1" class="accordion-collapse collapse" aria-labelledby="heading_str_96x1" data-bs-parent="#accordion_str_96x1">
+                              <div class="accordion-body">
+                                <img src="Pictures/Str_96.jpg" width="100%" alt="Стр. 96. M.E.I.">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          Број 
+                          <strong>
+                            жлебних профила 
+                          </strong>
+                          на гоњеној ламели:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/z_fr_sp_g=.png" alt="z="> 1.061
+                        </p>
+                        <p>
+                          <strong>
+                            усвајам
+                          </strong>:
+                          <img src="Pictures/png/z=.png" alt="z="> 3 жлебних профила на гоњеној ламели - Т 4.8. M.E.I!
+                        </p>
+                        <div class="accordion" id="accordion_T4_8x1">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_T4_8x1">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T4_8x1" aria-expanded="true" aria-controls="collapse_T4_8x1">
+                                Т4.8
+                              </button>
+                            </h2>
+                            <div id="collapse_T4_8x1" class="accordion-collapse collapse" aria-labelledby="heading_T4_8x1" data-bs-parent="#accordion_T4_8x1">
+                              <div class="accordion-body">
+                                <img src="Pictures/T4_8.jpg" width="100%" alt="Табела 4.8">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          <strong>
+                            Површински притисак
+                          </strong>
+                          :
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/p_zleba_g=.png" alt="p="> 35.368 <img src="Pictures/png/N_mm2.png" alt="N/mm^2"> - задовољава, јер је:<img src="Pictures/png/p_manje_pd.png" alt="p<=pd">
+                        </p>
+                        <p>
+                          <strong>
+                            Напон смицања
+                          </strong>
+                          :
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/tau_s_g=.png" alt="&tau;s="> 17.086 <img src="Pictures/png/N_mm2.png" alt="N/mm^2">
+                        </p>
+                        <div class="accordion" id="accordion_T2_3x1g">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_T2_3x1g">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T2_3x1g" aria-expanded="true" aria-controls="collapse_T2_3x1g">
+                                Т2.3 - Механичке карактеристике
+                              </button>
+                            </h2>
+                            <div id="collapse_T2_3x1g" class="accordion-collapse collapse" aria-labelledby="heading_T2_3x1g" data-bs-parent="#accordion_T2_3x1g">
+                              <div class="accordion-body">
+                                <img src="Pictures/T2_3.jpg" width="100%" alt="T2.3">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          <strong>
+                            Из Т 2.3 М.Е.I за Č.1220: 
+                          </strong>
+                          <img src="Pictures/png/ReH=.png" alt="ReH="> 360 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <div class="accordion" id="accordion_T2_5x1g">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_T2_5x1g">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T2_5x1g" aria-expanded="true" aria-controls="collapse_T2_5x1g">
+                                Т2.5 - Степен сигурности
+                              </button>
+                            </h2>
+                            <div id="collapse_T2_5x1g" class="accordion-collapse collapse" aria-labelledby="heading_T2_5x1g" data-bs-parent="#accordion_T2_5x1g">
+                              <div class="accordion-body">
+                                <img src="Pictures/T2_5.jpg" width="100%" alt="T2.5">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          <strong>
+                            Степен сигурности 
+                          </strong>
+                          усвајамо из T2.5: <img src="Pictures/png/s_solo=.png" alt="S="> 3
+                        </p>
+                        <p>
+                          <strong>
+                            Дозвољени напон смицања 
+                          </strong>
+                          :
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/tau_sd=.png" alt="&tau;sd="> 96.000 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <p>
+                          <strong>
+                            Напон смицања је мањи од дозвољеног 
+                          </strong>
+                          :
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/tau_s_manje_tau_sd.png" alt="&tau;s<&tau;sd">
+                        </p>
+                        <p>
+                          <strong>
+                            усвајам
+                          </strong>
+                          ширину жлебног профила
+                          :
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/b=.png" alt="b="> 9 <img src="Pictures/png/mm.png" alt="mm"> - Т 4.8. M.E.I.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="klin">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_klin" aria-expanded="true" aria-controls="collapse_klin">
+                        Спој вратила са клином:
+                      </button>
+                    </h2>
+                    <div id="collapse_klin" class="accordion-collapse collapse" aria-labelledby="klin" data-bs-parent="#proracun_fr_spojnice">
+                      <div class="accordion-body">
+                        <p>
+                          За 
+                          <strong>
+                             усвојен пречник 
+                          </strong>
+                          вратила: <img src="Pictures/png/d_malo=.png" alt="d="> 55 <img src="Pictures/png/mm.png" alt="mm"> из T 4.7 M.E.I мере клина износе:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/b=.png" alt="b="> 16 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/h=.png" alt="h="> 10 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/t_klin=.png" alt="t="> 6.2 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/r=.png" alt="r="> 0.5 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>
+                            Дубина жлеба  
+                          </strong>
+                          за клин у главчини:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/t1=.png" alt="t1="> 3.8 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <div class="accordion" id="accordion_T4_7">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_T4_7">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T4_7" aria-expanded="true" aria-controls="collapse_T4_7">
+                                Т4.7
+                              </button>
+                            </h2>
+                            <div id="collapse_T4_7" class="accordion-collapse collapse" aria-labelledby="heading_T4_7" data-bs-parent="#accordion_T4_7">
+                              <div class="accordion-body">
+                                <img src="Pictures/T4_7.jpg" width="100%" alt="Табела 4.7">
+                                <p>
+                                  Стандардне дужине клинова: 20, 25, 28, 32, 36, 40, 45, 50, 56, 63, 70, 80, 90, 100, 110, 125, 140, 180, 200, ... , 400, а за нормалне клинове и још: 5, 8, 10, 12, 15, 16, 18.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion" id="accordion_Sl_4_37">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_Sl_4_37">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_Sl_4_37" aria-expanded="true" aria-controls="collapse_Sl_4_37">
+                                Сл. 4.37:
+                              </button>
+                            </h2>
+                            <div id="collapse_Sl_4_37" class="accordion-collapse collapse" aria-labelledby="heading_Sl_4_37" data-bs-parent="#accordion_Sl_4_37">
+                              <div class="accordion-body">
+                                <img src="Pictures/Sl_4_37.jpg" width="100%" alt="Сл. 4.37">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          Усвајамо да је главчина од сивог лива.
+                        </p>
+                        <p>
+                          <strong>
+                            Дозвољени површински притисак: 
+                          </strong>
+                          <img src="Pictures/png/pd=.png" alt="pd="> 45 до 65 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <p>
+                          <strong>
+                            Усвајам: 
+                          </strong>
+                          <img src="Pictures/png/pd=.png" alt="pd="> 45 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <p>
+                          <strong>
+                            Обимна сила 
+                          </strong>
+                          на клину: 
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/Ftk_el_sp=.png" alt="Ftk="> 5787.452 <img src="Pictures/png/N.png" alt="N">
+                        </p>
+                        <p>
+                          <strong>
+                            Површински притисак између клина и вратила 
+                          </strong>
+                          се рачуна по обрасцу: <img src="Pictures/png/p1.png" alt="p1=Ftk/lk/t<pd">
+                        </p>
+                        <p>
+                          <strong>
+                            Површински притисак између клина и главчине  
+                          </strong>
+                          се рачуна по обрасцу: <img src="Pictures/png/p2.png" alt="p2=Ftk/lk/t1<pd">
+                        </p>
+                        <p>
+                          Како је: <img src="Pictures/png/t1_manje_t.png" alt="t1<t"> следи да је <img src="Pictures/png/p2_vece_p1.png" alt="p2>p1">
+                        </p>
+                        <p>
+                          <strong>
+                            Корисна дужина клина 
+                          </strong>
+                          одређује се из услова да је површински притисак између клина и главчине мањи од дозвољеног.
+                        </p>
+                        <p>
+                          <strong>
+                            Корисна дужина 
+                          </strong>
+                          клина је: 
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/lk_racunsko=.png" alt="lk="> 33.845 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>
+                            Стр. 108 М.Е.I усвајамо стандардну дужину клина: 
+                          </strong>
+                          <img src="Pictures/png/l=.png" alt="l="> 50 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          Стварна
+                          <strong>
+                            корисна дужина  
+                          </strong>
+                          клина је:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/lk=.png" alt="lk=l-b="> 34 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>
+                            Површински притисак 
+                          </strong>
+                          између клина и главчине: 
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/p2=.png" alt="p2="> 44.795 <img src="Pictures/png/N_mm2.png" alt="N/mm2"> < <img src="Pictures/png/pd=.png" alt="pd="> 45 до 65 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <p>
+                          <strong>
+                            Ознака усвојеног клина: 
+                          </strong>
+                          Клин без нагиба 16x10x50 Č.0645 JUS M.C2.060
+                        </p>
+                        <p>
+                          <strong>
+                            Напон смицања 
+                          </strong>
+                          :
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/tau_s=.png" alt="&tau;s="> 10.639 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <div class="accordion" id="accordion_T2_3x2">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_T2_3x2">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T2_3x2" aria-expanded="true" aria-controls="collapse_T2_3x2">
+                                Т2.3 - Механичке карактеристике
+                              </button>
+                            </h2>
+                            <div id="collapse_T2_3x2" class="accordion-collapse collapse" aria-labelledby="heading_T2_3x2" data-bs-parent="#accordion_T2_3x2">
+                              <div class="accordion-body">
+                                <img src="Pictures/T2_3.jpg" width="100%" alt="T2.3">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          <strong>
+                            Из Т 2.3 М.Е.I 
+                          </strong>
+                          за Č.0645: 
+                          <img src="Pictures/png/ReH=.png" alt="ReH="> 320 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <div class="accordion" id="accordion_T2_5x2">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_T2_5x2">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T2_5x2" aria-expanded="true" aria-controls="collapse_T2_5x2">
+                                Т2.5 - Степен сигурности
+                              </button>
+                            </h2>
+                            <div id="collapse_T2_5x2" class="accordion-collapse collapse" aria-labelledby="heading_T2_5x2" data-bs-parent="#accordion_T2_5x2">
+                              <div class="accordion-body">
+                                <img src="Pictures/T2_5.jpg" width="100%" alt="T2.5">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          <strong>
+                            Степен сигурности 
+                          </strong>
+                          усвајамо из T2.5: <img src="Pictures/png/s_solo=.png" alt="S="> 3
+                        </p>
+                        <p>
+                          <strong>
+                            Дозвољени напон смицања 
+                          </strong>
+                          :
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/tau_sd=.png" alt="&tau;sd="> 85.33333 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <p>
+                          <strong>
+                            Напон смицања је мањи од дозвољеног 
+                          </strong>
+                          :<img src="Pictures/png/tau_s_manje_tau_sd.png" alt="&tau;s<&tau;sd">
+                        </p>
+                        <p>
+                          Стр. 108 М.Е.I 
+                          <strong>
+                            усвајамо стандардну дужину клина 
+                          </strong>
+                          гоњеног вратила:
+                          <img src="Pictures/png/l=.png" alt="l="> 100 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="poluga">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_poluga" aria-expanded="true" aria-controls="collapse_poluga">
+                        Конструкција полуге:
+                      </button>
+                    </h2>
+                    <div id="collapse_poluga" class="accordion-collapse collapse" aria-labelledby="poluga" data-bs-parent="#proracun_fr_spojnice">
+                      <div class="accordion-body">
+                        <p>
+                          због равномерније расподеле нормалне силе на дискове, <strong>нормална сила</strong> се остварује помоћу осам полуга, које су равномерно распоређене по обиму спојнице са угаоним размаком од: 45 &deg;
+                        </p>
+                        <div class="accordion" id="accordion_Konstrukcija_poluge">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_Konstrukcija_poluge">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_Konstrukcija_poluge" aria-expanded="true" aria-controls="collapse_Konstrukcija_poluge">
+                                Конструкција полуге
+                              </button>
+                            </h2>
+                            <div id="collapse_Konstrukcija_poluge" class="accordion-collapse collapse" aria-labelledby="heading_Konstrukcija_poluge" data-bs-parent="#accordion_Konstrukcija_poluge">
+                              <div class="accordion-body">
+                                <img src="Pictures/Sema_poluge.jpg" width="100%" alt="Конструкција полуге">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          У центру зглобне везе  
+                          <strong>
+                             сума момената
+                          </strong>
+                          мора бити једнака нули:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/Suma_momenata=.png" alt="Ms="> 243.605 <img src="Pictures/png/Nmm.png" alt="Nmm">
+                        </p>
+                        <div class="accordion" id="accordion_Osovinica">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_Osovinica">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_Osovinica" aria-expanded="true" aria-controls="collapse_Osovinica">
+                                Осовиница
+                              </button>
+                            </h2>
+                            <div id="collapse_Osovinica" class="accordion-collapse collapse" aria-labelledby="heading_Osovinica" data-bs-parent="#accordion_Osovinica">
+                              <div class="accordion-body">
+                                <img src="Pictures/Osovinica.jpg" width="100%" alt="Осовиница">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          Полуга се окреће око
+                          <strong>
+                             осовинице - зглобна веза
+                          </strong>
+                          , која је оптерећена на савијање:
+                        </p>
+                        <p>
+                          На месту 
+                          <strong>
+                            зглобне везе 
+                          </strong>
+                          од сила: <img src="Pictures/png/Fn_8.png" alt="Fn/8"> и <img src="Pictures/png/Fx.png" alt="Fx"> се формирају два супротна спрега сила и резултантна сила: <img src="Pictures/png/Fr.png" alt="Fr"> која оптерећује осовиницу на савијање, стр 123 М.Е.I!
+                        </p>
+                        <div class="accordion" id="accordion_Str_123">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_Str_123">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_Str_123" aria-expanded="true" aria-controls="collapse_Str_123">
+                                Стр. 123. - Прорачун осовиница
+                              </button>
+                            </h2>
+                            <div id="collapse_Str_123" class="accordion-collapse collapse" aria-labelledby="heading_Str_123" data-bs-parent="#accordion_Str_123">
+                              <div class="accordion-body">
+                                <img src="Pictures/Str_123.jpg" width="100%" alt="Стр. 123. - Прорачун осовиница">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          <strong>
+                            Резултантна сила
+                          </strong>
+                          :
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/Fr=.png" alt="Fr="> 1242.144 <img src="Pictures/png/N.png" alt="N">
+                        </p>
+                        <p>
+                          <strong>
+                            Момент савијања
+                          </strong>
+                          :
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/Ms_osovinice=.png" alt="Ms="> 2794.824 <img src="Pictures/png/Nmm.png" alt="Nmm">
+                        </p>
+                        <p>
+                          <strong>
+                            Трајна динамичка чврстоћа на једносмерно промењиво оптерећење 
+                          </strong>
+                          се усваја за материјал осовинице: Č.1730 из T 2.3 M.E.I:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/sigma_D0=.png" alt="&sigma;D(0)="> 590 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <div class="accordion" id="accordion_T2_3x3">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_T2_3x3">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T2_3x3" aria-expanded="true" aria-controls="collapse_T2_3x3">
+                                Т2.3 - Механичке карактеристике
+                              </button>
+                            </h2>
+                            <div id="collapse_T2_3x3" class="accordion-collapse collapse" aria-labelledby="heading_T2_3x3" data-bs-parent="#accordion_T2_3x3">
+                              <div class="accordion-body">
+                                <img src="Pictures/T2_3.jpg" width="100%" alt="T2.3">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          <strong>
+                            Т 2.5 М.Е.I
+                          </strong>
+                           степен сигурности: <img src="Pictures/png/s_solo=.png" alt="S="> 3
+                        </p>
+                        <div class="accordion" id="accordion_T2_5x3">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_T2_5x3">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T2_5x3" aria-expanded="true" aria-controls="collapse_T2_5x3">
+                                Т2.5 - Степен сигурности
+                              </button>
+                            </h2>
+                            <div id="collapse_T2_5x3" class="accordion-collapse collapse" aria-labelledby="heading_T2_5x3" data-bs-parent="#accordion_T2_5x3">
+                              <div class="accordion-body">
+                                <img src="Pictures/T2_5.jpg" width="100%" alt="T2.5">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          <strong>
+                            Дозвољени напон 
+                          </strong>
+                          :
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/sigma_sd=.png" alt="&sigma;sd="> 196.667 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <p>
+                          <strong>
+                            Пречник осовинице
+                          </strong>
+                          :
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/d_osovinice=.png" alt="d>="> 5.251 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          Пречник повећавамо за 10% због 
+                          <strong>
+                            хабања 
+                          </strong>
+                          и из конструктивних разлога усвајамо:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/d_malo=.png" alt="d="> 14 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <div class="accordion" id="accordion_T0_1">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="Standardni_brojevi">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_Standardni_brojevi" aria-expanded="true" aria-controls="collapse_Standardni_brojevi">
+                                Стандардни бројеви:
+                              </button>
+                            </h2>
+                            <div id="collapse_Standardni_brojevi" class="accordion-collapse collapse" aria-labelledby="Standardni_brojevi" data-bs-parent="#accordion_T0_1">
+                              <div class="accordion-body">
+                                <img src="Pictures/Standardni_brojevi.jpg" width="100%" alt="Стандардни бројеви">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          Осовиница је 
+                          <strong>
+                            оптерећена
+                          </strong>
+                          на смицање и површински притисак:
+                        </p>
+                        <p>
+                          <strong>
+                            Напон смицања 
+                          </strong>
+                          :
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/tau_s_osovinice=.png" alt="&tau;s="> 4.035 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <p>
+                          <strong>
+                            Из Т 2.3 М.Е.I за Č.1730: 
+                          </strong>
+                          <img src="Pictures/png/ReH=.png" alt="ReH="> 460 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <p>
+                          <strong>
+                            Степен сигурности 
+                          </strong>
+                          усвајамо из T2.5: <img src="Pictures/png/s_solo=.png" alt="S="> 3
+                        </p>
+                        <p>
+                          <strong>
+                            Дозвољени напон смицања 
+                          </strong>
+                          :
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/tau_sd=.png" alt="&tau;sd="> 122.667 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <p>
+                          <strong>
+                            Напон смицања је мањи од дозвољеног 
+                          </strong>
+                          :
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/tau_s_manje_tau_sd.png" alt="&tau;s<&tau;sd">
+                        </p>
+                        <p>
+                          <strong>
+                            Површински притисак на дужини 
+                          </strong>
+                          <img src="Pictures/png/l_solo.png" alt="l">:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/p_l=.png" alt="p="> 9.858 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <p>
+                          <strong>
+                            Површински притисак на дужини 
+                          </strong>
+                          <img src="Pictures/png/l_minus_l.png" alt="L-l">:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/p_l_minus_l=.png" alt="p="> 9.858 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <p>
+                          <strong>
+                            Дозвољени површински притисак 
+                          </strong>
+                          :<img src="Pictures/png/pd=.png" alt="pd="> 10 до 14 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <p>
+                          <strong>
+                            Усвајам 
+                          </strong>
+                          :<img src="Pictures/png/pd=.png" alt="pd="> 10 <img src="Pictures/png/N_mm2.png" alt="N/mm2"> за каљене и брушене додирне површине!
+                        </p>
+                        <p>
+                          Полуга је оптерећена на
+                          <strong>
+                             савијање 
+                          </strong>
+                          :
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/Ms_poluge=.png" alt="Ms="> 24360.450 <img src="Pictures/png/Nmm.png" alt="Nmm">
+                        </p>
+                        <p>
+                          <strong>
+                            Трајна динамичка чврстоћа на једносмерно промењиво оптерећење 
+                          </strong>
+                          се усваја за материјал полуге: Č.1730 из T 2.3 M.E.I:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/sigma_D0=.png" alt="&sigma;D(0)="> 590 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <p>
+                          <strong>
+                            Т 2.5 М.Е.I
+                          </strong>
+                           степен сигурности: <img src="Pictures/png/s_solo=.png" alt="S="> 3
+                        </p>
+                        <p>
+                          <strong>
+                            Дозвољени напон 
+                          </strong>
+                          :
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/sigma_sd=.png" alt="&sigma;sd="> 196.667 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <div class="accordion" id="accordion_Kontaktna_povrsina">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_Kontaktna_povrsina">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_Kontaktna_povrsina" aria-expanded="true" aria-controls="collapse_Kontaktna_povrsina">
+                                Пресек зглобне везе полуге са осовиницом
+                              </button>
+                            </h2>
+                            <div id="collapse_Kontaktna_povrsina" class="accordion-collapse collapse" aria-labelledby="heading_Kontaktna_povrsina" data-bs-parent="#accordion_Kontaktna_povrsina">
+                              <div class="accordion-body">
+                                <img src="Pictures/Kontaktna_povrsina.jpg" width="100%" alt="Пресек полуге у згло бу са осовиницом">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          Усвојена
+                          <strong>
+                            ширина полуге 
+                          </strong>
+                          :
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/b=.png" alt="b="> 9 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>
+                            Аксијални отпорни момент  
+                          </strong>
+                          инерције површине попречног пресека полуге на месту највећег оптерећења:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/W_poluge=.png" alt="W="> 394.2 <img src="Pictures/png/mm3.png" alt="mm3">
+                        </p>
+                        <p>
+                          <strong>
+                            Напон савијања 
+                          </strong>
+                           износи:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/sigma_s=.png" alt="&sigma;="> 61.797 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <p>
+                          Напон савијања
+                          <strong>
+                          је мањи 
+                          </strong>
+                          од дозвољеног:
+                          <img src="Pictures/png/sigma_s_manje_jed_sigma_sd.png" alt="&sigma;s<&sigma;sd">
+                        </p>
+                        <p>
+                          <strong>
+                            Критичан пресек је  
+                          </strong>
+                          на месту преласка са прстенастог попречног пресека на правоугаони! 
+                        </p>
+                        <p>
+                          <strong>
+                            Критична 
+                          </strong>
+                          висина:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/hkr=.png" alt="hkr="> 8.8 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>
+                            Критичан аксијални отпорни момент  
+                          </strong>
+                          инерције површине попречног пресека полуге на месту највећег оптерећења:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/W_min=.png" alt="Wmin="> 116.239 <img src="Pictures/png/mm3.png" alt="mm3">
+                        </p>
+                        <p>
+                          Момент савијања на
+                          <strong>
+                             критичном месту 
+                          </strong>
+                          :
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/Ms_poluge_kr=.png" alt="Ms="> 21924.405 <img src="Pictures/png/Nmm.png" alt="Nmm">
+                        </p>
+                        <p>
+                          <strong>
+                            Напон савијања 
+                          </strong>
+                           износи:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/sigma_s=.png" alt="&sigma;="> 188.615 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <p>
+                          Напон савијања
+                          <strong>
+                          је мањи 
+                          </strong>
+                          од дозвољеног:
+                          <img src="Pictures/png/sigma_s_manje_jed_sigma_sd.png" alt="&sigma;s<&sigma;sd">
+                        </p>
+                        <p>
+                          На месту дејства силе напон савијања је нула, па се због тога висина полуге постепено смањује ка месту дејства нормалне силе - идеалан би био облик 
+                          <strong>
+                             кубног параболоида
+                          </strong>!
+                        </p>
+                        <p>
+                          У обзир није узета 
+                          <strong>
+                            центрифугална сила 
+                          </strong>
+                          (константан број обртаја - константан интензитет силе) која растерећује осовинице - полуге у раду, тј прорачун је рађен узимајући у обзир 
+                          <strong>
+                            неповољније услове рада
+                          </strong>
+                          !
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="frikciona_spojnica" role="tabpanel" aria-labelledby="frikciona_spojnica-tab">
+                <div class="accordion" id="modeliranje_i_crtezi_fr_sp">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="mod_crtezi_glavcine_g_o_fr_sp">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_mod_crtezi_glavcine_g_o_fr_sp" aria-expanded="true" aria-controls="collapse_mod_crtezi_glavcine_g_o_fr_sp">
+                        Моделирање и цртеж главчине гоњеног обода:
+                      </button>
+                    </h2>
+                    <div id="collapse_mod_crtezi_glavcine_g_o_fr_sp" class="accordion-collapse collapse show" aria-labelledby="mod_crtezi_glavcine_g_o_fr_sp" data-bs-parent="#modeliranje_i_crtezi_fr_sp">
+                      <div class="accordion-body">
+                        <ul class="nav nav-tabs" id="glavcina_gonjenog_oboda_Tab" role="tablist">
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="crtez_glavcine_gonjenog_oboda-tab" data-bs-toggle="tab" data-bs-target="#crtez_glavcine_gonjenog_oboda" type="button" role="tab" aria-controls="crtez_glavcine_gonjenog_oboda" aria-selected="true">Цртеж главчине гоњеног обода</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="mod_glavcine-tab" data-bs-toggle="tab" data-bs-target="#mod_glavcine" type="button" role="tab" aria-controls="mod_glavcine" aria-selected="false">Моделирање</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="izrada_crteza_glavcine-tab" data-bs-toggle="tab" data-bs-target="#izrada_crteza_glavcine" type="button" role="tab" aria-controls="izrada_crteza_glavcine" aria-selected="false">Израда цртежа</button>
+                          </li>
+                        </ul>
+                        <div class="tab-content" id="glavcina_gonjenog_oboda_TabContent">
+                          <div class="tab-pane show active" id="crtez_glavcine_gonjenog_oboda" role="tabpanel" aria-labelledby="crtez_glavcine_gonjenog_oboda-tab">
+                            <img src="Pictures/Crtezi/Glavcina_gonjenog_oboda_spojnice.jpg" width="100%" alt="Цртеж главчине гоњеног обода">
+                          </div>
+                          <div class="tab-pane" id="mod_glavcine" role="tabpanel" aria-labelledby="mod_glavcine-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/O6d0Ci5HbG8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                          <div class="tab-pane" id="izrada_crteza_glavcine" role="tabpanel" aria-labelledby="izrada_crteza_glavcine-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/spnQEsRpB04" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="mod_i_crtezi_masivnih_diskova_fr_sp">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_mod_i_crtezi_masivnih_diskova_fr_sp" aria-expanded="true" aria-controls="collapse_mod_i_crtezi_masivnih_diskova_fr_sp">
+                        Моделирање и цртежи масивних дискова:
+                      </button>
+                    </h2>
+                    <div id="collapse_mod_i_crtezi_masivnih_diskova_fr_sp" class="accordion-collapse collapse" aria-labelledby="mod_i_crtezi_masivnih_diskova_fr_sp" data-bs-parent="#modeliranje_i_crtezi_fr_sp">
+                      <div class="accordion-body">
+                        <ul class="nav nav-tabs" id="masivni_diskovi_Tab" role="tablist">
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="crtez_prednjeg_masivnog_diska-tab" data-bs-toggle="tab" data-bs-target="#crtez_prednjeg_masivnog_diska" type="button" role="tab" aria-controls="crtez_prednjeg_masivnog_diska" aria-selected="true">Цртеж предњег масивног диска</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="crtez_zadnjeg_masivnog_diska-tab" data-bs-toggle="tab" data-bs-target="#crtez_zadnjeg_masivnog_diska" type="button" role="tab" aria-controls="crtez_zadnjeg_masivnog_diska" aria-selected="false">Цртеж задњег масивног диска</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="mod_i_izrada_crteza_masivnih_diskova-tab" data-bs-toggle="tab" data-bs-target="#mod_i_izrada_crteza_masivnih_diskova" type="button" role="tab" aria-controls="mod_i_izrada_crteza_masivnih_diskova" aria-selected="false">Моделирање и израда цртежа</button>
+                          </li>
+                        </ul>
+                        <div class="tab-content" id="masivni_diskovi_TabContent">
+                          <div class="tab-pane show active" id="crtez_prednjeg_masivnog_diska" role="tabpanel" aria-labelledby="crtez_prednjeg_masivnog_diska-tab">
+                            <img src="Pictures/Crtezi/Prednji_masivni_disk.jpg" width="100%" alt="Цртеж предњег масивног диска">
+                          </div>
+                          <div class="tab-pane" id="crtez_zadnjeg_masivnog_diska" role="tabpanel" aria-labelledby="crtez_zadnjeg_masivnog_diska-tab">
+                            <img src="Pictures/Crtezi/Zadnji_masivni_disk.jpg" width="100%" alt="Цртеж задњег масивног диска">
+                          </div>
+                          <div class="tab-pane" id="mod_i_izrada_crteza_masivnih_diskova" role="tabpanel" aria-labelledby="mod_i_izrada_crteza_masivnih_diskova-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/dZWgjgrqph8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="mod_i_crtezi_pog_i_gonj_diska_fr_sp">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_mod_i_crtezi_pog_i_gonj_diska_fr_sp" aria-expanded="true" aria-controls="collapse_mod_i_crtezi_pog_i_gonj_diska_fr_sp">
+                        Моделирање и цртежи погонског и гоњеног диска:
+                      </button>
+                    </h2>
+                    <div id="collapse_mod_i_crtezi_pog_i_gonj_diska_fr_sp" class="accordion-collapse collapse" aria-labelledby="mod_i_crtezi_pog_i_gonj_diska_fr_sp" data-bs-parent="#modeliranje_i_crtezi_fr_sp">
+                      <div class="accordion-body">
+                        <ul class="nav nav-tabs" id="pog_i_gonj_diskovi_Tab" role="tablist">
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="crtez_pogonskog_diska-tab" data-bs-toggle="tab" data-bs-target="#crtez_pogonskog_diska" type="button" role="tab" aria-controls="crtez_pogonskog_diska" aria-selected="true">Цртеж погонског диска</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="crtez_gonjenog_diska-tab" data-bs-toggle="tab" data-bs-target="#crtez_gonjenog_diska" type="button" role="tab" aria-controls="crtez_gonjenog_diska" aria-selected="false">Цртеж гоњеног диска</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="mod_i_izrada_crteza_pog_i_gonj_diska-tab" data-bs-toggle="tab" data-bs-target="#mod_i_izrada_crteza_pog_i_gonj_diska" type="button" role="tab" aria-controls="mod_i_izrada_crteza_pog_i_gonj_diska" aria-selected="false">Моделирање и израда цртежа</button>
+                          </li>
+                        </ul>
+                        <div class="tab-content" id="pog_i_gonj_diskovi_TabContent">
+                          <div class="tab-pane show active" id="crtez_pogonskog_diska" role="tabpanel" aria-labelledby="crtez_pogonskog_diska-tab">
+                            <img src="Pictures/Crtezi/Pogonski_disk.jpg" width="100%" alt="Цртеж погонског диска">
+                          </div>
+                          <div class="tab-pane" id="crtez_gonjenog_diska" role="tabpanel" aria-labelledby="crtez_gonjenog_diska-tab">
+                            <img src="Pictures/Crtezi/Gonjeni_disk.jpg" width="100%" alt="Цртеж гоњеног диска">
+                          </div>
+                          <div class="tab-pane" id="mod_i_izrada_crteza_pog_i_gonj_diska" role="tabpanel" aria-labelledby="mod_i_izrada_crteza_pog_i_gonj_diska-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/fdcg9y7O-Q8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="mod_i_crtezi_caure_fr_sp">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_mod_i_crtezi_caure_fr_sp" aria-expanded="true" aria-controls="collapse_mod_i_crtezi_caure_fr_sp">
+                        Моделирање и цртеж чауре:
+                      </button>
+                    </h2>
+                    <div id="collapse_mod_i_crtezi_caure_fr_sp" class="accordion-collapse collapse" aria-labelledby="mod_i_crtezi_caure_fr_sp" data-bs-parent="#modeliranje_i_crtezi_fr_sp">
+                      <div class="accordion-body">
+                        <ul class="nav nav-tabs" id="caura_Tab" role="tablist">
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="crtez_caure-tab" data-bs-toggle="tab" data-bs-target="#crtez_caure" type="button" role="tab" aria-controls="crtez_caure" aria-selected="true">Цртеж чауре</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="mod_i_izrada_crteza_caure-tab" data-bs-toggle="tab" data-bs-target="#mod_i_izrada_crteza_caure" type="button" role="tab" aria-controls="mod_i_izrada_crteza_caure" aria-selected="false">Моделирање и израда цртежа</button>
+                          </li>
+                        </ul>
+                        <div class="tab-content" id="caura_TabContent">
+                          <div class="tab-pane show active" id="crtez_caure" role="tabpanel" aria-labelledby="crtez_caure-tab">
+                            <img src="Pictures/Crtezi/Caura.jpg" width="100%" alt="Цртеж чауре">
+                          </div>
+                          <div class="tab-pane" id="mod_i_izrada_crteza_caure" role="tabpanel" aria-labelledby="mod_i_izrada_crteza_caure-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/S1V6qzN5Mtg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="mod_i_crtezi_granicnika_i_navrtke_fr_sp">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_mod_i_crtezi_granicnika_i_navrtke_fr_sp" aria-expanded="true" aria-controls="collapse_mod_i_crtezi_granicnika_i_navrtke_fr_sp">
+                        Моделирање и цртежи граничника и навртке:
+                      </button>
+                    </h2>
+                    <div id="collapse_mod_i_crtezi_granicnika_i_navrtke_fr_sp" class="accordion-collapse collapse" aria-labelledby="mod_i_crtezi_granicnika_i_navrtke_fr_sp" data-bs-parent="#modeliranje_i_crtezi_fr_sp">
+                      <div class="accordion-body">
+                        <ul class="nav nav-tabs" id="gran_i_navrtka_Tab" role="tablist">
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="crtez_granicnika-tab" data-bs-toggle="tab" data-bs-target="#crtez_granicnika" type="button" role="tab" aria-controls="crtez_granicnika" aria-selected="true">Цртеж граничника</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="crtez_navrtke-tab" data-bs-toggle="tab" data-bs-target="#crtez_navrtke" type="button" role="tab" aria-controls="crtez_navrtke" aria-selected="false">Цртеж навртке</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="mod_i_izrada_crteza_gran_i_navrtke-tab" data-bs-toggle="tab" data-bs-target="#mod_i_izrada_crteza_gran_i_navrtke" type="button" role="tab" aria-controls="mod_i_izrada_crteza_gran_i_navrtke" aria-selected="false">Моделирање и израда цртежа</button>
+                          </li>
+                        </ul>
+                        <div class="tab-content" id="gran_i_navrtka_TabContent">
+                          <div class="tab-pane show active" id="crtez_granicnika" role="tabpanel" aria-labelledby="crtez_granicnika-tab">
+                            <img src="Pictures/Crtezi/Granicnik.jpg" width="100%" alt="Цртеж граничника">
+                          </div>
+                          <div class="tab-pane" id="crtez_navrtke" role="tabpanel" aria-labelledby="crtez_navrtke-tab">
+                            <img src="Pictures/Crtezi/Navrtka.jpg" width="100%" alt="Цртеж навртке">
+                          </div>
+                          <div class="tab-pane" id="mod_i_izrada_crteza_gran_i_navrtke" role="tabpanel" aria-labelledby="mod_i_izrada_crteza_gran_i_navrtke-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/9W5O80EFy2Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="mod_i_crtezi_pogonskog_oboda_fr_sp">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_mod_i_crtezi_pogonskog_oboda_fr_sp" aria-expanded="true" aria-controls="collapse_mod_i_crtezi_pogonskog_oboda_fr_sp">
+                        Моделирање и цртеж погонског обода:
+                      </button>
+                    </h2>
+                    <div id="collapse_mod_i_crtezi_pogonskog_oboda_fr_sp" class="accordion-collapse collapse" aria-labelledby="mod_i_crtezi_pogonskog_oboda_fr_sp" data-bs-parent="#modeliranje_i_crtezi_fr_sp">
+                      <div class="accordion-body">
+                        <ul class="nav nav-tabs" id="pogonski_obod_Tab" role="tablist">
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="crtez_pogonskog_oboda-tab" data-bs-toggle="tab" data-bs-target="#crtez_pogonskog_oboda" type="button" role="tab" aria-controls="crtez_pogonskog_oboda" aria-selected="true">Цртеж погонског обода</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="mod_pogonskog_oboda-tab" data-bs-toggle="tab" data-bs-target="#mod_pogonskog_oboda" type="button" role="tab" aria-controls="mod_pogonskog_oboda" aria-selected="false">Моделирање</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="izrada_crteza_pogonskog_oboda-tab" data-bs-toggle="tab" data-bs-target="#izrada_crteza_pogonskog_oboda" type="button" role="tab" aria-controls="izrada_crteza_pogonskog_oboda" aria-selected="false">Израда цртежа</button>
+                          </li>
+                        </ul>
+                        <div class="tab-content" id="pogonski_obod_TabContent">
+                          <div class="tab-pane show active" id="crtez_pogonskog_oboda" role="tabpanel" aria-labelledby="crtez_pogonskog_oboda-tab">
+                            <img src="Pictures/Crtezi/Obod_pogonske_spojnice.jpg" width="100%" alt="Цртеж погонског обода">
+                          </div>
+                          <div class="tab-pane" id="mod_pogonskog_oboda" role="tabpanel" aria-labelledby="mod_pogonskog_oboda-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/oUXC_MsSLG4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                          <div class="tab-pane" id="izrada_crteza_pogonskog_oboda" role="tabpanel" aria-labelledby="izrada_crteza_pogonskog_oboda-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/CVSUbRBFkTU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="mod_i_crtezi_gonjenog_oboda_fr_sp">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_mod_i_crtezi_gonjenog_oboda_fr_sp" aria-expanded="true" aria-controls="collapse_mod_i_crtezi_gonjenog_oboda_fr_sp">
+                        Моделирање и цртеж гоњеног обода:
+                      </button>
+                    </h2>
+                    <div id="collapse_mod_i_crtezi_gonjenog_oboda_fr_sp" class="accordion-collapse collapse" aria-labelledby="mod_i_crtezi_gonjenog_oboda_fr_sp" data-bs-parent="#modeliranje_i_crtezi_fr_sp">
+                      <div class="accordion-body">
+                        <ul class="nav nav-tabs" id="gonjeni_obod_Tab" role="tablist">
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="crtez_gonjenog_oboda-tab" data-bs-toggle="tab" data-bs-target="#crtez_gonjenog_oboda" type="button" role="tab" aria-controls="crtez_gonjenog_oboda" aria-selected="true">Цртеж гоњеног обода</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="mod_i_crtez_gonjenog_oboda-tab" data-bs-toggle="tab" data-bs-target="#mod_i_crtez_gonjenog_oboda" type="button" role="tab" aria-controls="mod_i_crtez_gonjenog_oboda" aria-selected="false">Моделирање и израда цртежа</button>
+                          </li>
+                        </ul>
+                        <div class="tab-content" id="gonjeni_obod_TabContent">
+                          <div class="tab-pane show active" id="crtez_gonjenog_oboda" role="tabpanel" aria-labelledby="crtez_gonjenog_oboda-tab">
+                            <img src="Pictures/Crtezi/Obod_gonjene_spojnice.jpg" width="100%" alt="Цртеж гоњеног обода">
+                          </div>
+                          <div class="tab-pane" id="mod_i_crtez_gonjenog_oboda" role="tabpanel" aria-labelledby="mod_i_crtez_gonjenog_oboda-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/aAzKqyduHpg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="mod_i_crtezi_opruge_osovinice_i_poluge_fr_sp">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_mod_i_crtezi_opruge_osovinice_i_poluge_fr_sp" aria-expanded="true" aria-controls="collapse_mod_i_crtezi_opruge_osovinice_i_poluge_fr_sp">
+                        Моделирање и цртежи опруге, осовинице и полуге:
+                      </button>
+                    </h2>
+                    <div id="collapse_mod_i_crtezi_opruge_osovinice_i_poluge_fr_sp" class="accordion-collapse collapse" aria-labelledby="mod_i_crtezi_opruge_osovinice_i_poluge_fr_sp" data-bs-parent="#modeliranje_i_crtezi_fr_sp">
+                      <div class="accordion-body">
+                        <ul class="nav nav-tabs" id="opruga_osovin_i_poluga_Tab" role="tablist">
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="crtez_opruge-tab" data-bs-toggle="tab" data-bs-target="#crtez_opruge" type="button" role="tab" aria-controls="crtez_opruge" aria-selected="true">Цртеж опруге</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="crtez_osovinice-tab" data-bs-toggle="tab" data-bs-target="#crtez_osovinice" type="button" role="tab" aria-controls="crtez_osovinice" aria-selected="false">Цртеж осовинице</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="crtez_poluge-tab" data-bs-toggle="tab" data-bs-target="#crtez_poluge" type="button" role="tab" aria-controls="crtez_poluge" aria-selected="false">Цртеж полуге</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="mod_i_izrada_crteza_opruge_osovin_i_poluge-tab" data-bs-toggle="tab" data-bs-target="#mod_i_izrada_crteza_opruge_osovin_i_poluge" type="button" role="tab" aria-controls="mod_i_izrada_crteza_opruge_osovin_i_poluge" aria-selected="false">Моделирање и израда цртежа</button>
+                          </li>
+                        </ul>
+                        <div class="tab-content" id="opruga_osovin_i_poluga_TabContent">
+                          <div class="tab-pane show active" id="crtez_opruge" role="tabpanel" aria-labelledby="crtez_opruge-tab">
+                            <img src="Pictures/Crtezi/Opruga.jpg" width="100%" alt="Цртеж опруге">
+                          </div>
+                          <div class="tab-pane" id="crtez_osovinice" role="tabpanel" aria-labelledby="crtez_osovinice-tab">
+                            <img src="Pictures/Crtezi/Osovinica.jpg" width="100%" alt="Цртеж осовинице">
+                          </div>
+                          <div class="tab-pane" id="crtez_poluge" role="tabpanel" aria-labelledby="crtez_poluge-tab">
+                            <img src="Pictures/Crtezi/Poluga.jpg" width="100%" alt="Цртеж полуге">
+                          </div>
+                          <div class="tab-pane" id="mod_i_izrada_crteza_opruge_osovin_i_poluge" role="tabpanel" aria-labelledby="mod_i_izrada_crteza_opruge_osovin_i_poluge-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/LZDmr29sySI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="mod_sklopa_fr_sp">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_mod_sklopa_fr_sp" aria-expanded="true" aria-controls="collapse_mod_sklopa_fr_sp">
+                        Моделирање и цртеж склопа фрикционе спојнице:
+                      </button>
+                    </h2>
+                    <div id="collapse_mod_sklopa_fr_sp" class="accordion-collapse collapse" aria-labelledby="mod_sklopa_fr_sp" data-bs-parent="#modeliranje_i_crtezi_fr_sp">
+                      <div class="accordion-body">
+                        <ul class="nav nav-tabs" id="sklop_fr_spojnice_Tab" role="tablist">
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="crtez_frikcione_spojnice-tab" data-bs-toggle="tab" data-bs-target="#crtez_frikcione_spojnice" type="button" role="tab" aria-controls="crtez_frikcione_spojnice" aria-selected="true">Цртеж склопа</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="mod_sklopa-tab" data-bs-toggle="tab" data-bs-target="#mod_sklopa" type="button" role="tab" aria-controls="mod_sklopa" aria-selected="false">Моделирање</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="izrada_crteza_sklopa-tab" data-bs-toggle="tab" data-bs-target="#izrada_crteza_sklopa" type="button" role="tab" aria-controls="izrada_crteza_sklopa" aria-selected="false">Израда цртежа</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="zip_sklopa-tab" data-bs-toggle="tab" data-bs-target="#zip_sklopa" type="button" role="tab" aria-controls="zip_sklopa" aria-selected="false">"Zip" склопа</button>
+                          </li>
+                        </ul>
+                        <div class="tab-content" id="sklop_fr_spojnice_TabContent">
+                          <div class="tab-pane show active" id="crtez_frikcione_spojnice" role="tabpanel" aria-labelledby="crtez_frikcione_spojnice-tab">
+                            <img src="Pictures/Crtezi/Frikciona_spojnica_sa_lamelama.jpg" width="100%" alt="Цртеж склопа">
+                          </div>
+                          <div class="tab-pane" id="mod_sklopa" role="tabpanel" aria-labelledby="mod_sklopa-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/tXXterz5Zck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                          <div class="tab-pane" id="izrada_crteza_sklopa" role="tabpanel" aria-labelledby="izrada_crteza_sklopa-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/pX1hs1NOfiI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                          <div class="tab-pane" id="zip_sklopa" role="tabpanel" aria-labelledby="zip_sklopa-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/7ui33O8MczM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="animacijax2">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_animacijax2" aria-expanded="true" aria-controls="collapse_animacijax2">
+                        Фрикциона спојница - анимација и принцип рада:
+                      </button>
+                    </h2>
+                    <div id="collapse_animacijax2" class="accordion-collapse collapse" aria-labelledby="animacijax2" data-bs-parent="#modeliranje_i_crtezi_fr_sp">
+                      <div class="accordion-body">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/npoMby1bZJA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer -->
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <nav class="card-header" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">&copy; Slobodan Ivković</li>
+                  <li class="breadcrumb-item"><a href="https://www.linkedin.com/in/slobodan-ivkovic-a08326ba"><img src="Pictures/Icons/linkedin.png" alt="linkedin logo"></a></li>
+                  <li class="breadcrumb-item"><a href="https://twitter.com/slobodan_iv"><img src="Pictures/Icons/twitter.png" alt="twitter logo"></a></li>
+                  <li class="breadcrumb-item"><a href="https://www.youtube.com/user/Mickijedini"><img src="Pictures/Icons/youtube.png" alt="youtube logo"></a></li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- container -->
+
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script> -->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>-->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1169 @@
+<!doctype html>
+<html lang="sr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Merriweather|Tangerine|Caveat" rel="stylesheet">
+    <!-- Bootstrap CSS
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>Еластична спојница!</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="Pictures/logo3.png" width="90" height="60" class="d-inline-block align-top rounded" alt="M3Design"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Стандардни елементи</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="vratilo.html">Вратило</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="lezaj.html">Лежај</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                Спојнице
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="prirubna_sp.html">Прирубна спојница</a></li>
+                <li><a class="dropdown-item active" href="#">Еластична спојница</a></li>
+                <li><a class="dropdown-item" href="frikciona_sp.html">Фрикциона спојница</a></li>
+                <li><a class="dropdown-item" href="kardanov_zglob.html">Карданов зглоб</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                Повезани Web site-ови
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="#">Моделирање преносника</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Моделирање зупчастог преносника</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Моделирање слож. склопова и тех. док.</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://slobodan-iv.github.io/modeliranje_i_simulacija_p_r_2022/">Моделирање и сим. пом. рач. шк. 2022/23. год.</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://slobodan-iv.github.io/modeliranje_i_simulacija_p_r/">Моделирање и сим. пом. рач. шк. 2021/22. год.</a>
+                </li>
+                </li>
+                  <a class="dropdown-item" href="https://slobodan-iv.github.io/modeliranje_izborni/">Моделирање и симулација пом. рач. - изб. пр.</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://slobodan-iv.github.io/konstruisanje/">Конструисање</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav><!-- navbar -->
+    <!-- container -->
+    <div class="container">
+      <!-- Content here -->
+      <div>
+        <h1>Прорачун моделирање и цртежи еластичне спојнице са гуменим ваљкастим улошцима</h1>
+        <div class="row justify-content-center">
+          <div class="col-12 col-sm-12 col-md-11 col-lg-10">
+            <ul class="nav nav-tabs" id="el_spojnica" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="postavka-tab" data-bs-toggle="tab" data-bs-target="#postavka" type="button" role="tab" aria-controls="postavka" aria-selected="true">Поставка задатка</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="proracun-tab" data-bs-toggle="tab" data-bs-target="#proracun" type="button" role="tab" aria-controls="proracun" aria-selected="true">Прорачун</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="elasticna_spojnica-tab" data-bs-toggle="tab" data-bs-target="#elasticna_spojnica" type="button" role="tab" aria-controls="elasticna_spojnica" aria-selected="false">Моделирање и цртежи</button>
+              </li>
+            </ul>
+            <div class="tab-content" id="el_sp_TabContent">
+              <div class="tab-pane fade show active" id="postavka" role="tabpanel" aria-labelledby="postavka-tab">
+                <div class="accordion" id="postavka_zadatka">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="sema_el_sp">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_sema_el_sp" aria-expanded="true" aria-controls="collapse_sema_el_sp">
+                        Шема еластичне спојнице:
+                      </button>
+                    </h2>
+                    <div id="collapse_sema_el_sp" class="accordion-collapse collapse show" aria-labelledby="sema_el_sp" data-bs-parent="#postavka_zadatka">
+                      <div class="accordion-body">
+                        <img src="Pictures/Sema_el_spojnice.jpg" width="100%" alt="Шема еластичне спојнице">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="T3_3">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T3_3" aria-expanded="true" aria-controls="collapse_T3_3">
+                        Табела 3.3:
+                      </button>
+                    </h2>
+                    <div id="collapse_T3_3" class="accordion-collapse collapse" aria-labelledby="T3_3" data-bs-parent="#postavka_zadatka">
+                      <div class="accordion-body">
+                        <img src="Pictures/T3_3.jpg" width="100%" alt="Табела 3.3">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="ul_podaci">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_ul_podaci" aria-expanded="true" aria-controls="collapse_ul_podaci">
+                        Улазни подаци:
+                      </button>
+                    </h2>
+                    <div id="collapse_ul_podaci" class="accordion-collapse collapse" aria-labelledby="ul_podaci" data-bs-parent="#postavka_zadatka">
+                      <div class="accordion-body">
+                        <p>
+                          Израчунати потребне параметре и моделирати еластичну спојницу на основу улазних података:
+                        </p>
+                        <p>
+                          Снага која се преноси: <img src="Pictures/png/P=.png" alt="P="> 37 <img src="Pictures/png/kW.png" alt="kW">
+                        </p>
+                        <p>
+                          Број обртаја погонског зупчаника: <img src="Pictures/png/n1=.png" alt="n1="> 710 <img src="Pictures/png/min_1.png" alt="min-1">
+                        </p>
+                        <p>
+                          Материјал вратила – обода спојнице: Č.0545
+                        </p>
+                        <p>
+                          Материјал клина: Č.0645
+                        </p>
+                        <p>
+                          Материјал осовинице са навојем: Č.0545
+                        </p>
+                        <p>
+                          Фактор спољних динамичких сила: <img src="Pictures/png/KA=.png" alt="&xi;KA="> 1.25
+                        </p>
+                        <p>
+                          На другој спојници, на којој нема уложака од гуме или полиуретана усвојити да је дужина дела спојнице на месту осовинице са навојем: <img src="Pictures/png/b.png" alt="b"> Т 3.3 М.Е.II
+                        </p>
+                        <p>
+                          Усвојити подлошку JUS M.B1.011 и навртку JUS M.B1.601 крупног корака шестоугаону, осовиницу са навојем JUS M.C3.060.
+                        </p>
+                        <h2>Потребно је:</h2>
+                        <ol>
+                          <li>
+                            с обзиром на радне услове димензионисати спојницу са улошцима од гуме или полиуретана (решење 3.7.б – други обод спојнице има цилиндричне проврте), усвојити стандардни димензије Т3.3 М.ЕII – спојнице са улошцима и осовиницама са навојем према JUS M.C3.060,
+                          </li>
+                          <li>
+                            проверити средњи површински притисак између гумених уложака и осовинице усвојен у тачки 1. Проверити напон савијања у осовиницама на месту укљештења,
+                          </li>
+                          <li>
+                            изабрати и проверити нормални клин без нагиба JUS.MC2.060 за спој вратила и главчине на напон смицања и површински притисак,
+                          </li>
+                          <li>
+                             моделирати осовиницу са навојем, навртку и подлошку,
+                          </li>
+                          <li>
+                            моделирати оба обода спојнице, уложак од гуме и склоп елемената усвојен - проверен на оптеређења у претходним тачкама,
+                          </li>
+                          <li>
+                            урадити радионичке цртеже оба обода спојнице и склопни цртеж на А3 формату папира,
+                          </li>
+                          <li>
+                            остале параметре усвајати према препорукама (конструктивно).
+                          </li>
+                        </ol>
+                        <h3>
+                          Литература - извор знања:
+                        </h3>
+                        <p>
+                          Машински елементи II - Спасоје Драпић
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="animacija">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_animacija" aria-expanded="true" aria-controls="collapse_animacija">
+                        Еластична спојница - принцип рада и анимација:
+                      </button>
+                    </h2>
+                    <div id="collapse_animacija" class="accordion-collapse collapse" aria-labelledby="animacija" data-bs-parent="#postavka_zadatka">
+                      <div class="accordion-body">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/j8FvmA7XRK4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="download">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_download" aria-expanded="true" aria-controls="collapse_download">
+                        Download докумената:
+                      </button>
+                    </h2>
+                    <div id="collapse_download" class="accordion-collapse collapse" aria-labelledby="download" data-bs-parent="#postavka_zadatka">
+                      <div class="accordion-body">
+                        <p>
+                          <a href="static/Elasticna_spojnica_proracun.xls">"Excel"-ов документ, прорачун без вредности - download</a>
+                        </p>
+                        <p>
+                          <a href="static/Elasticna_spojnica_proracun.pdf">"PDF" документ, пример прорачуна - download</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="proracun" role="tabpanel" aria-labelledby="proracun-tab">
+                <div class="accordion" id="proracun_el_spojnice">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="mere_spojnice">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_mere_spojnice" aria-expanded="true" aria-controls="collapse_mere_spojnice">
+                        Мере спојнице:
+                      </button>
+                    </h2>
+                    <div id="collapse_mere_spojnice" class="accordion-collapse collapse show" aria-labelledby="mere_spojnice" data-bs-parent="#proracun_el_spojnice">
+                      <div class="accordion-body">
+                        <p>
+                          <strong>Снага</strong> која се преноси: <img src="Pictures/png/P=.png" alt="P="> 37 <img src="Pictures/png/kW.png" alt="kW">
+                        </p>
+                        <p>
+                          <strong>Број обртаја</strong> погонског зупчаника: <img src="Pictures/png/n1=.png" alt="n1="> 710 <img src="Pictures/png/min_1.png" alt="min-1">
+                        </p>
+                        <p>
+                          <strong>
+                            Угаона брзина: 
+                          </strong>
+                          <img src="Pictures/png/ug_brzina=.png" alt="&omega;="> 74.35103 <img src="Pictures/png/rad_s.png" alt="rad/s">
+                        </p>
+                        <p>
+                          <strong>
+                            Обртни момент: 
+                          </strong>
+                        </p>
+                        <p>
+                          <img src="Pictures/png/T=.png" alt="T="> 497.6394 <img src="Pictures/png/Nm.png" alt="Nm">
+                        </p>
+                        <p>
+                          <img src="Pictures/png/T=.png" alt="T="> 497639.4 <img src="Pictures/png/Nmm.png" alt="Nmm">
+                        </p>
+                        <div class="accordion" id="accordion_T2_3">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_T2_3">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T2_3" aria-expanded="true" aria-controls="collapse_T2_3">
+                                Т2.3 - Механичке карактеристике
+                              </button>
+                            </h2>
+                            <div id="collapse_T2_3" class="accordion-collapse collapse" aria-labelledby="heading_T2_3" data-bs-parent="#accordion_T2_3">
+                              <div class="accordion-body">
+                                <img src="Pictures/T2_3.jpg" width="100%" alt="T2.3">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          За материјал вратила-обода спојнице (по поставци задатка) <strong>Č.0545</strong> из Т 2.3 М.Е.I усвајамо <strong>трајну динамичку чврстоћу</strong> на једносмерну промену напона за случај увијања:
+                        </p>
+                        <p>
+                          <img src="Pictures/png/tau_D0=.png" alt="&tau;(D0)="> 170 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <p>
+                          <strong>
+                            Дозвољени напон увијања: 
+                          </strong>
+                          <img src="Pictures/png/tau_ud=.png" alt="&tau;ud="> 56.66667 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <p>
+                          <strong>
+                            Степен сигурности 
+                          </strong>
+                          усвајамо из T2.5: <img src="Pictures/png/s_solo=.png" alt="S="> 3
+                        </p>
+                        <div class="accordion" id="accordion_T2_5">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_T2_5">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T2_5" aria-expanded="true" aria-controls="collapse_T2_5">
+                                Т2.5 - Степен сигурности
+                              </button>
+                            </h2>
+                            <div id="collapse_T2_5" class="accordion-collapse collapse" aria-labelledby="heading_T2_5" data-bs-parent="#accordion_T2_5">
+                              <div class="accordion-body">
+                                <img src="Pictures/T2_5.jpg" width="100%" alt="T2.5">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          <strong>
+                            Називни пречник вратила: 
+                          </strong>
+                          <img src="Pictures/png/di=.png" alt="di="> 38.24 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          на израчунати пречник вратила додаје се дубина жљеба за клин и стандардизује се пречник вратила:
+                        </p>
+                        <p>
+                          <strong>
+                            израчунатом пречнику вратила 
+                          </strong>
+                          38.23746 <img src="Pictures/png/mm.png" alt="mm"> одговара дубина жлеба за клин:
+                        </p>
+                        <p>
+                          <img src="Pictures/png/t_klin=.png" alt="t="> 4.9 <img src="Pictures/png/mm.png" alt="mm">, те добијамо потребан пречник вратила:
+                        </p>
+                        <div class="accordion" id="accordion_T4_7x1">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_T4_7x1">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T4_7x1" aria-expanded="true" aria-controls="collapse_T4_7x1">
+                                Т4.7
+                              </button>
+                            </h2>
+                            <div id="collapse_T4_7x1" class="accordion-collapse collapse" aria-labelledby="heading_T4_7x1" data-bs-parent="#accordion_T4_7x1">
+                              <div class="accordion-body">
+                                <img src="Pictures/T4_7.jpg" width="100%" alt="Табела 4.7">
+                                <p>
+                                  Стандардне дужине клинова: 20, 25, 28, 32, 36, 40, 45, 50, 56, 63, 70, 80, 90, 100, 110, 125, 140, 180, 200, ... , 400, а за нормалне клинове и још: 5, 8, 10, 12, 15, 16, 18.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          <img src="Pictures/png/d_vratila=.png" alt="d="> 43.13746 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>
+                            додавањем дубине жлеба за клин 
+                          </strong>
+                          на израчунати пречник вратила прелазимо на пречнике вратила: од 44 до 50 mm (усвајањем првог већег стандардног пречника), због чега додајемо 
+                          <strong>
+                            дубину жлеба за клин
+                          </strong>:
+                        </p>
+                        <p>
+                          <img src="Pictures/png/t_klin=.png" alt="t="> 5.5 <img src="Pictures/png/mm.png" alt="mm">, те добијамо потребан пречник вратила:
+                        </p>
+                        <p>
+                          <img src="Pictures/png/d_vratila=.png" alt="d="> 43.74 <img src="Pictures/png/mm.png" alt="mm"> и стандардизујемо пречник вратила Т 0.1 М.Е.I
+                        </p>
+                        <p>
+                          <strong>
+                            како се из T 0.1 усвајају 
+                          </strong>
+                          вредности за ред R5, R10, R20, R40, па тек на крају подешени бројеви, то се усваја:
+                        </p>
+                        <div class="accordion" id="accordion_T0_1">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="Standardni_brojevi">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_Standardni_brojevi" aria-expanded="true" aria-controls="collapse_Standardni_brojevi">
+                                Стандардни бројеви:
+                              </button>
+                            </h2>
+                            <div id="collapse_Standardni_brojevi" class="accordion-collapse collapse" aria-labelledby="Standardni_brojevi" data-bs-parent="#accordion_T0_1">
+                              <div class="accordion-body">
+                                <img src="Pictures/Standardni_brojevi.jpg" width="100%" alt="Стандардни бројеви">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          <strong>
+                            пречник вратила на месту спојнице: 
+                          </strong>
+                          <img src="Pictures/png/d_malo=.png" alt="d="> 45 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <div class="accordion" id="accordion_sema_el_sp">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="sema_el_spx2">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_sema_el_spx2" aria-expanded="true" aria-controls="collapse_sema_el_spx2">
+                                Шема еластичне спојнице:
+                              </button>
+                            </h2>
+                            <div id="collapse_sema_el_spx2" class="accordion-collapse collapse" aria-labelledby="sema_el_spx2" data-bs-parent="#accordion_sema_el_sp">
+                              <div class="accordion-body">
+                                <img src="Pictures/Sema_el_spojnice.jpg" width="100%" alt="Шема еластичне спојнице">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          <strong>
+                            провера исправности усвојеног клина: 
+                          </strong>
+                        </p>
+                        <p>
+                          <img src="Pictures/png/d_t=.png" alt="d-t="> 39.5 <img src="Pictures/png/mm.png" alt="mm"> > <img src="Pictures/png/di_solo=.png" alt="di="> 38.24 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <div class="accordion" id="accordion_T3_3">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_T3_3x2">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T3_3x2" aria-expanded="true" aria-controls="collapse_T3_3x2">
+                                Т3.3 - Стандардне мере спојница
+                              </button>
+                            </h2>
+                            <div id="collapse_T3_3x2" class="accordion-collapse collapse" aria-labelledby="heading_T3_3x2" data-bs-parent="#accordion_T3_3">
+                              <div class="accordion-body">
+                                <img src="Pictures/T3_3.jpg" width="100%" alt="T3.3">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          <strong>Из T 3.3 M.E.II, за оптерећење:</strong> <img src="Pictures/png/T_pr=.png" alt="T&asymp;"> 605 <img src="Pictures/png/Nm.png" alt="Nm"> усвајам мере за спојницу: 
+                        </p>
+                        <p>
+                          <img src="Pictures/png/d_malo=.png" alt="d="> 25 до 60 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <img src="Pictures/png/xmin=.png" alt="xmin="> 2 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <img src="Pictures/png/b=.png" alt="b="> 32.5 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <img src="Pictures/png/d=.png" alt="D="> 200 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <img src="Pictures/png/D0=.png" alt="D0="> 145 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <img src="Pictures/png/nmax=.png" alt="nmax="> 2860 <img src="Pictures/png/min_1.png" alt="min-1">
+                        </p>
+                        <p>
+                          <img src="Pictures/png/du=.png" alt="du="> 28 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <img src="Pictures/png/dz=.png" alt="dz="> 14 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <img src="Pictures/png/l1=.png" alt="l1="> 95 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <img src="Pictures/png/l2=.png" alt="l2="> 120 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <div class="accordion" id="accordion_T6_1">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_T6_1">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T6_1" aria-expanded="true" aria-controls="collapse_T6_1">
+                                Т6.1 - Стандардне мере осовиница
+                              </button>
+                            </h2>
+                            <div id="collapse_T6_1" class="accordion-collapse collapse" aria-labelledby="heading_T6_1" data-bs-parent="#accordion_T6_1">
+                              <div class="accordion-body">
+                                <img src="Pictures/T6_1.jpg" width="100%" alt="T6.1">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          којима одговара <img src="Pictures/png/z=.png" alt="z="> 8 уложака са навојем за коју се из Т 6.1. M.E.I. одређује <strong>
+                            пречник осовинице
+                          </strong>: 
+                        </p>
+                        <p>
+                          <img src="Pictures/png/d_dz=.png" alt="d=dz="> 14 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <div class="accordion" id="accordion_Sl6_5">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_Sl6_5">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_Sl6_5" aria-expanded="true" aria-controls="collapse_Sl6_5">
+                                Сл 6.5 - Стандардне осовинице
+                              </button>
+                            </h2>
+                            <div id="collapse_Sl6_5" class="accordion-collapse collapse" aria-labelledby="heading_Sl6_5" data-bs-parent="#accordion_Sl6_5">
+                              <div class="accordion-body">
+                                <img src="Pictures/Sl_6_5.jpg" width="100%" alt="Sl 6.5">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          <strong>
+                          дужина дела са навојем: 
+                          </strong>
+                          <img src="Pictures/png/l1=.png" alt="l1="> 18 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>
+                            пречник навоја: 
+                          </strong>
+                          <img src="Pictures/png/Md=.png" alt="Md="> 12 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>
+                            дужина жлеба за прелаз - израду навоја: 
+                          </strong>
+                          <img src="Pictures/png/f_malo=.png" alt="f="> 3 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>
+                            димензије подлошке за осовиницу &empty; 14 су:
+                          </strong>
+                        </p>
+                        <p>
+                          <strong>
+                            највећи пречник: 
+                          </strong>
+                          <img src="Pictures/png/d=.png" alt="d="> 28 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>
+                            пречник отвора: 
+                          </strong>
+                          <img src="Pictures/png/d0_podl=.png" alt="d0="> 15 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>
+                            висина подлошке: 
+                          </strong>
+                          <img src="Pictures/png/s=.png" alt="s="> 2.5 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <div class="accordion" id="accordion_T7_50">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_T7_50">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T7_50" aria-expanded="true" aria-controls="collapse_T7_50">
+                                Табела 7.50:
+                              </button>
+                            </h2>
+                            <div id="collapse_T7_50" class="accordion-collapse collapse" aria-labelledby="heading_T7_50" data-bs-parent="#accordion_T7_50">
+                              <div class="accordion-body">
+                                <img src="Pictures/T7_50.jpg" width="100%" alt="Табела 7.50">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          <strong>
+                            димензије навртке за навој М12 су:
+                          </strong>
+                        </p>
+                        <p>
+                          <strong>
+                            отвор кључа: 
+                          </strong>
+                          <img src="Pictures/png/s=.png" alt="s="> 19 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>
+                            пречник описане кружнице око навртке: 
+                          </strong>
+                          <img src="Pictures/png/e=.png" alt="e="> 21.9 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>
+                            висина навртке: 
+                          </strong>
+                          <img src="Pictures/png/m=.png" alt="m="> 10 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <div class="accordion" id="accordion_T7_48">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_T7_48">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T7_48" aria-expanded="true" aria-controls="collapse_T7_48">
+                                Табела 7.48:
+                              </button>
+                            </h2>
+                            <div id="collapse_T7_48" class="accordion-collapse collapse" aria-labelledby="heading_T7_48" data-bs-parent="#accordion_T7_48">
+                              <div class="accordion-body">
+                                <img src="Pictures/T7_48.jpg" width="100%" alt="Табела 7.48">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          <strong>
+                            дужина осовинице се рачуна:
+                          </strong>
+                        </p>
+                        <p>
+                          <img src="Pictures/png/lmin=.png" alt="lmin="> 79.5 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>усвајам стандардну дужину</strong> осовинице: <img src="Pictures/png/l=.png" alt="l="> 80 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>
+                            стандардна ознака
+                          </strong> 
+                          усвојене осовинице је:
+                        </p>
+                        <p>
+                          осовиница са навојем
+                          <img src="Pictures/png/oznaka_osovinice.png" alt="14 h11x80 JUS M.C3.060">
+                        </p>
+                        <p>
+                          сада се може израчунати <strong>растојање између обода спојнице</strong>, у другом ободу спојнице део без навоја се наслања на упуст за осовиницу:
+                        </p>
+                        <p>
+                          <img src="Pictures/png/y=.png" alt="y="> 5.5 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>
+                            усвајам растојање између спојница:
+                          </strong>
+                        </p>
+                        <p>
+                          <img src="Pictures/png/x=.png" alt="x="> 3 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <div class="accordion" id="accordion_sema_el_spx2">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="sema_el_spx3">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_sema_el_spx3" aria-expanded="true" aria-controls="collapse_sema_el_spx3">
+                                Шема еластичне спојнице:
+                              </button>
+                            </h2>
+                            <div id="collapse_sema_el_spx3" class="accordion-collapse collapse" aria-labelledby="sema_el_spx3" data-bs-parent="#accordion_sema_el_spx2">
+                              <div class="accordion-body">
+                                <img src="Pictures/Sema_el_spojnice.jpg" width="100%" alt="Шема еластичне спојнице">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          <strong>
+                            решење сл. М.Е.II 3.7.б
+                          </strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="klin">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_klin" aria-expanded="true" aria-controls="collapse_klin">
+                        Избор и провера клина:
+                      </button>
+                    </h2>
+                    <div id="collapse_klin" class="accordion-collapse collapse" aria-labelledby="klin" data-bs-parent="#proracun_el_spojnice">
+                      <div class="accordion-body">
+                        <p>
+                          <strong>
+                            T 4.7 M.E.II 
+                          </strong>називном пречнику од <img src="Pictures/png/d_malo=.png" alt="d="> 45 <img src="Pictures/png/mm.png" alt="mm"> одговара клин:
+                        </p>
+                        <p>
+                          <img src="Pictures/png/b=.png" alt="b="> 14 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <img src="Pictures/png/h=.png" alt="h="> 9 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <img src="Pictures/png/t_klin=.png" alt="t="> 5.5 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <img src="Pictures/png/r=.png" alt="r="> 0.5 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>
+                            дужина клина реално могућа: 
+                          </strong>
+                          <img src="Pictures/png/l=.png" alt="l="> 80 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>
+                            јер је дужина спојнице: 
+                          </strong>
+                          <img src="Pictures/png/l1=.png" alt="l1="> 95 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <div class="accordion" id="accordion_T4_7">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_T4_7">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T4_7" aria-expanded="true" aria-controls="collapse_T4_7">
+                                Т4.7
+                              </button>
+                            </h2>
+                            <div id="collapse_T4_7" class="accordion-collapse collapse" aria-labelledby="heading_T4_7" data-bs-parent="#accordion_T4_7">
+                              <div class="accordion-body">
+                                <img src="Pictures/T4_7.jpg" width="100%" alt="Табела 4.7">
+                                <p>
+                                  Стандардне дужине клинова: 20, 25, 28, 32, 36, 40, 45, 50, 56, 63, 70, 80, 90, 100, 110, 125, 140, 180, 200, ... , 400, а за нормалне клинове и још: 5, 8, 10, 12, 15, 16, 18.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          <strong>
+                            Обимна сила на клину: 
+                          </strong>
+                          <img src="Pictures/png/Ftk_el_sp=.png" alt="Ftk="> 27646.63 <img src="Pictures/png/N.png" alt="N">
+                        </p>
+                        <div class="accordion" id="accordion_Sl_4_37">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_Sl_4_37">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_Sl_4_37" aria-expanded="true" aria-controls="collapse_Sl_4_37">
+                                Сл. 4.37:
+                              </button>
+                            </h2>
+                            <div id="collapse_Sl_4_37" class="accordion-collapse collapse" aria-labelledby="heading_Sl_4_37" data-bs-parent="#accordion_Sl_4_37">
+                              <div class="accordion-body">
+                                <img src="Pictures/Sl_4_37.jpg" width="100%" alt="Сл. 4.37">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          <strong>
+                            Дубина жлеба за клин у главчини: 
+                          </strong>
+                          <img src="Pictures/png/t1=.png" alt="t1="> 3.5 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          Усвајамо да је главчина од челика или челичног лива.
+                        </p>
+                        <p>
+                          <strong>
+                            За главчину од челика или челичног лива
+                          </strong>, корисна дужина клина је: 
+                          <img src="Pictures/png/lk.png" alt="lk=l-b">
+                        </p>
+                        <p>
+                          <strong>
+                            Дозвољени површински притисак: 
+                          </strong>
+                          <img src="Pictures/png/pd=.png" alt="pd="> 75 до 100 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <p>
+                          <strong>
+                            Површински притисак између клина и вратила 
+                          </strong>
+                          се рачуна по обрасцу: <img src="Pictures/png/p1.png" alt="p1=Ftk/lk/t<pd">
+                        </p>
+                        <p>
+                          <strong>
+                            Површински притисак између клина и главчине  
+                          </strong>
+                          се рачуна по обрасцу: <img src="Pictures/png/p2.png" alt="p2=Ftk/lk/t1<pd">
+                        </p>
+                        <p>
+                          Како је: <img src="Pictures/png/t1_manje_t.png" alt="t1<t"> следи да је <img src="Pictures/png/p2_vece_p1.png" alt="p2>p1">
+                        </p>
+                        <p>
+                          <strong>
+                            Стр. 108 М.Е.I усвајамо стандардну дужину клина: 
+                          </strong>
+                          <img src="Pictures/png/l=.png" alt="l="> 80 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>
+                            корисна дужина клина је: 
+                          </strong>
+                          <img src="Pictures/png/lk=.png" alt="lk=l-b="> 66 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>
+                            Површински притисак између клина и главчине: 
+                          </strong>
+                        </p>
+                        <p>
+                          <img src="Pictures/png/p2=.png" alt="p2="> 59.8412 <img src="Pictures/png/N_mm2.png" alt="N/mm2"> < <img src="Pictures/png/pd=.png" alt="pd="> 75 до 100 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <p>
+                          <strong>
+                            усвајам два клина промера под 120&deg;
+                          </strong>
+                        </p>
+                        <p>
+                          <strong>
+                            Ознака усвојеног клина: 
+                          </strong>
+                          Клин без нагиба 14x9x80 Č.0645 JUS M.C2.060
+                        </p>
+                        <p>
+                          <strong>
+                            Напон смицања: 
+                          </strong>
+                          <img src="Pictures/png/tau_s=.png" alt="&tau;s="> 14.9603 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <div class="accordion" id="accordion_T2_3x2">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_T2_3x2">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T2_3x2" aria-expanded="true" aria-controls="collapse_T2_3x2">
+                                Т2.3 - Механичке карактеристике
+                              </button>
+                            </h2>
+                            <div id="collapse_T2_3x2" class="accordion-collapse collapse" aria-labelledby="heading_T2_3x2" data-bs-parent="#accordion_T2_3x2">
+                              <div class="accordion-body">
+                                <img src="Pictures/T2_3.jpg" width="100%" alt="T2.3">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          <strong>
+                            Из Т 2.3 М.Е.I за Č.0645: 
+                          </strong>
+                          <img src="Pictures/png/ReH=.png" alt="ReH="> 320 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <div class="accordion" id="accordion_T2_5x2">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_T2_5x2">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T2_5x2" aria-expanded="true" aria-controls="collapse_T2_5x2">
+                                Т2.5 - Степен сигурности
+                              </button>
+                            </h2>
+                            <div id="collapse_T2_5x2" class="accordion-collapse collapse" aria-labelledby="heading_T2_5x2" data-bs-parent="#accordion_T2_5x2">
+                              <div class="accordion-body">
+                                <img src="Pictures/T2_5.jpg" width="100%" alt="T2.5">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          <strong>
+                            Степен сигурности 
+                          </strong>
+                          усвајамо из T2.5: <img src="Pictures/png/s_solo=.png" alt="S="> 3
+                        </p>
+                        <p>
+                          <strong>
+                            Дозвољени напон смицања: 
+                          </strong>
+                          <img src="Pictures/png/tau_sd=.png" alt="&tau;sd="> 85.33333 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <p>
+                          <strong>
+                            Напон смицања је мањи од дозвољеног: 
+                          </strong>
+                          <img src="Pictures/png/tau_s_manje_tau_sd.png" alt="&tau;s<&tau;sd">
+                        </p>
+                        <p>
+                          <strong>
+                            друго вратило треба да буде већег пречника
+                          </strong>, па усвајам пречник из Т 0.1. М.Е.I:
+                        </p>
+                        <p>
+                          <img src="Pictures/png/d_malo=.png" alt="d="> 47.5 <img src="Pictures/png/mm.png" alt="mm"> коме одговара клин истих димензија као и код вратила I, само је обод спојнице дужи, па је клин дужи:
+                        </p>
+                        <div class="accordion" id="accordion_T0_1x2">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="Standardni_brojevix2">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_Standardni_brojevix2" aria-expanded="true" aria-controls="collapse_Standardni_brojevix2">
+                                Стандардни бројеви:
+                              </button>
+                            </h2>
+                            <div id="collapse_Standardni_brojevix2" class="accordion-collapse collapse" aria-labelledby="Standardni_brojevix2" data-bs-parent="#accordion_T0_1x2">
+                              <div class="accordion-body">
+                                <img src="Pictures/Standardni_brojevi.jpg" width="100%" alt="Стандардни бројеви">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          <strong>
+                            дужина обода спојнице: 
+                          </strong>
+                          <img src="Pictures/png/l2=.png" alt="l2="> 120 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>
+                            Стр. 108 М.Е.I усвајамо стандардну дужину клина: 
+                          </strong>
+                          <img src="Pictures/png/l=.png" alt="l="> 110 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>
+                            Површински притисак између клина и главчине  
+                          </strong>
+                          се рачуна по обрасцу: <img src="Pictures/png/p2.png" alt="p2=Ftk/lk/t1<pd">
+                        </p>
+                        <p>
+                          <strong>
+                            корисна дужина клина је: 
+                          </strong>
+                          <img src="Pictures/png/lk=.png" alt="lk=l-b="> 96 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          <strong>
+                            Обимна сила на клину: 
+                          </strong>
+                          <img src="Pictures/png/Ftk_el_sp=.png" alt="Ftk="> 26191.55 <img src="Pictures/png/N.png" alt="N">
+                        </p>
+                        <p>
+                          <strong>
+                            Површински притисак између клина и главчине: 
+                          </strong>
+                        </p>
+                        <p>
+                          <img src="Pictures/png/p2=.png" alt="p2="> 77.95103 <img src="Pictures/png/N_mm2.png" alt="N/mm2"> < <img src="Pictures/png/pd=.png" alt="pd="> 75 до 100 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <p>
+                          <strong>
+                            усвајам један клин
+                          </strong>
+                        </p>
+                        <p>
+                          <strong>
+                            Ознака усвојеног клина: 
+                          </strong>
+                          Клин без нагиба 14x9x110 Č.0645 JUS M.C2.060
+                        </p>
+                        <p>
+                          <strong>
+                            Напон смицања: 
+                          </strong>
+                          <img src="Pictures/png/tau_s=.png" alt="&tau;s="> 19.48776 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <p>
+                          <strong>
+                            Напон смицања је мањи од дозвољеног: 
+                          </strong>
+                          <img src="Pictures/png/tau_s_manje_tau_sd.png" alt="&tau;s<&tau;sd">
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="zavrtanj">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_zavrtanj" aria-expanded="true" aria-controls="collapse_zavrtanj">
+                        Провера осовинице на савијање:
+                      </button>
+                    </h2>
+                    <div id="collapse_zavrtanj" class="accordion-collapse collapse" aria-labelledby="zavrtanj" data-bs-parent="#proracun_el_spojnice">
+                      <div class="accordion-body">
+                        <p>
+                          осовиница је оптерећена на <strong>савијање</strong>, које представља једносмерно промењиво оптерећење за осовиницу:
+                        </p>
+                        <p>
+                          <strong>
+                            трајна динамичка чврстоћа 
+                          </strong>
+                          на једносмерно промењиво оптерећење за материјал осовинице Č.0545 усвајамо из T 2.3 M.E.I
+                        </p>
+                        <p>
+                          <img src="Pictures/png/sigma_D0=.png" alt="&sigma;D(0)="> 350 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <div class="accordion" id="accordion_T2_3x3">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading_T2_3x3">
+                              <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T2_3x3" aria-expanded="true" aria-controls="collapse_T2_3x3">
+                                Т2.3 - Механичке карактеристике
+                              </button>
+                            </h2>
+                            <div id="collapse_T2_3x3" class="accordion-collapse collapse" aria-labelledby="heading_T2_3x3" data-bs-parent="#accordion_T2_3x3">
+                              <div class="accordion-body">
+                                <img src="Pictures/T2_3.jpg" width="100%" alt="T2.3">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          <strong>
+                            момент савијања се рачуна по једначини:
+                          </strong>
+                        </p>
+                        <p>
+                          <img src="Pictures/png/Ms=.png" alt="Ms="> 27616.84 <img src="Pictures/png/Nmm.png" alt="Nmm">
+                        </p>
+                        <p>
+                          <strong>
+                            обимна сила на једном улошку - осовиници: 
+                          </strong>
+                          <img src="Pictures/png/Ft1=.png" alt="Ft1="> 1072.499 <img src="Pictures/png/N.png" alt="N">
+                        </p>
+                        <p>
+                          <strong>
+                            аксијални отпорни момент  
+                          </strong>
+                          инерције површине попречног пресека пречника осовинице који трпи оптерећење:
+                        </p>
+                        <p>
+                          <img src="Pictures/png/W=.png" alt="W="> 269.3916 <img src="Pictures/png/mm3.png" alt="mm3">
+                        </p>
+                        <p>
+                          <strong>
+                            напон савијања износи: 
+                          </strong>
+                          <img src="Pictures/png/sigma=.png" alt="&sigma;="> 102.5156 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <p>
+                          <strong>
+                          провера степена сигурности: 
+                          </strong>
+                          <img src="Pictures/png/s_provera=.png" alt="s="> 3.414114 
+                        </p>
+                        <p>
+                          <strong>
+                            степен сигурности задовољава  
+                          </strong>
+                          треба да буде у границама 2 до 3! Посматрани попречни пресек је предимензионисан, или је површина п.п. одређена из других услова.
+                        </p>
+                        <p>
+                          <strong>
+                            провера средњег површинског притиска 
+                          </strong>
+                          између осовинице и уложака:
+                        </p>
+                        <p>
+                          <img src="Pictures/png/P_osovinice.png" alt="p<pdoz">
+                        </p>
+                        <p>
+                          дозвољени површински притисак за улошке од гуме:
+                        </p>
+                        <p>
+                          <img src="Pictures/png/pdoz=.png" alt="pdoz="> 2.4 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <p>
+                          <strong>
+                            средњи површински притисак: 
+                          </strong>
+                          <img src="Pictures/png/p_osovinice=.png" alt="p="> 2.35714 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+                        </p>
+                        <p>
+                          <strong>
+                            Површински притисак задовољава: 
+                          </strong>
+                          <img src="Pictures/png/p_osovinice.png" alt="p<pdoz">
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="elasticna_spojnica" role="tabpanel" aria-labelledby="elasticna_spojnica-tab">
+                <div class="accordion" id="modeliranje_i_crtezi_el_sp">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="mod_oboda_el_sp">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_mod_oboda_el_sp" aria-expanded="true" aria-controls="collapse_mod_oboda_el_sp">
+                        Моделирање обода еластичне спојнице:
+                      </button>
+                    </h2>
+                    <div id="collapse_mod_oboda_el_sp" class="accordion-collapse collapse show" aria-labelledby="mod_oboda_el_sp" data-bs-parent="#modeliranje_i_crtezi_el_sp">
+                      <div class="accordion-body">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/OzP1HkSe7TQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="mod_sklopa_el_sp">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_mod_sklopa_el_sp" aria-expanded="true" aria-controls="collapse_mod_sklopa_el_sp">
+                        Моделирање склопа еластичне спојнице са гуменим ваљкастим улошцима и осовиницама са навојем:
+                      </button>
+                    </h2>
+                    <div id="collapse_mod_sklopa_el_sp" class="accordion-collapse collapse" aria-labelledby="mod_sklopa_el_sp" data-bs-parent="#modeliranje_i_crtezi_el_sp">
+                      <div class="accordion-body">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/Qz0rtJNdXXM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="mod_crtezi_oboda_i_sklopa_el_sp">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_mod_crtezi_oboda_i_sklopa_el_sp" aria-expanded="true" aria-controls="collapse_mod_crtezi_oboda_i_sklopa_el_sp">
+                        Цртежи обода и склопа еластичне спојнице:
+                      </button>
+                    </h2>
+                    <div id="collapse_mod_crtezi_oboda_i_sklopa_el_sp" class="accordion-collapse collapse" aria-labelledby="mod_crtezi_oboda_i_sklopa_el_sp" data-bs-parent="#modeliranje_i_crtezi_el_sp">
+                      <div class="accordion-body">
+                        <ul class="nav nav-tabs" id="crtezi_i_korekcije_Tab" role="tablist">
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="desni_obod-tab" data-bs-toggle="tab" data-bs-target="#desni_obod" type="button" role="tab" aria-controls="desni_obod" aria-selected="true">Десни обод</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="levi_obod-tab" data-bs-toggle="tab" data-bs-target="#levi_obod" type="button" role="tab" aria-controls="levi_obod" aria-selected="false">Леви обод</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="izrada_crteza_oboda-tab" data-bs-toggle="tab" data-bs-target="#izrada_crteza_oboda" type="button" role="tab" aria-controls="izrada_crteza_oboda" aria-selected="false">Израда цртежа обода</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="sklop-tab" data-bs-toggle="tab" data-bs-target="#sklop" type="button" role="tab" aria-controls="sklop" aria-selected="false">Склоп</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="izrada_crteza_sklopa-tab" data-bs-toggle="tab" data-bs-target="#izrada_crteza_sklopa" type="button" role="tab" aria-controls="izrada_crteza_sklopa" aria-selected="false">Израда цртежа склопа</button>
+                          </li>
+                        </ul>
+                        <div class="tab-content" id="crtezi_i_korekcije_TabContent">
+                          <div class="tab-pane show active" id="desni_obod" role="tabpanel" aria-labelledby="desni_obod-tab">
+                            <p>
+                              На цртежу кота 51 <img src="Pictures/png/mm.png" alt="mm"> треба да буде 51.1 <img src="Pictures/png/mm.png" alt="mm"> (погледај Т 4.7)!
+                            </p>
+                            <img src="Pictures/Crtezi/Desni_obod_el_sp.jpg" width="100%" alt="Цртеж десног обода">
+                          </div>
+                          <div class="tab-pane" id="levi_obod" role="tabpanel" aria-labelledby="levi_obod-tab">
+                            <p>
+                              На цртежу кота 48.5 <img src="Pictures/png/mm.png" alt="mm"> треба да буде 48.6 <img src="Pictures/png/mm.png" alt="mm"> (погледај Т 4.7)!
+                            </p>
+                            <img src="Pictures/Crtezi/Levi_obod_el_sp.jpg" width="100%" alt="Цртеж левог обода">
+                          </div>
+                          <div class="tab-pane" id="izrada_crteza_oboda" role="tabpanel" aria-labelledby="izrada_crteza_oboda-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/R99JkS_KeEw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                          <div class="tab-pane" id="sklop" role="tabpanel" aria-labelledby="sklop-tab">
+                            <img src="Pictures/Crtezi/Sklop_elasticne_spojnice.jpg" width="100%" alt="Цртеж склопа еластичне спојнице">
+                          </div>
+                          <div class="tab-pane" id="izrada_crteza_sklopa" role="tabpanel" aria-labelledby="izrada_crteza_sklopa-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/Qz0rtJNdXXM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="animacijax2">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_animacijax2" aria-expanded="true" aria-controls="collapse_animacijax2">
+                        Еластична спојница - принцип рада и анимација:
+                      </button>
+                    </h2>
+                    <div id="collapse_animacijax2" class="accordion-collapse collapse" aria-labelledby="animacijax2" data-bs-parent="#modeliranje_i_crtezi_el_sp">
+                      <div class="accordion-body">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/j8FvmA7XRK4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer -->
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <nav class="card-header" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">&copy; Slobodan Ivković</li>
+                  <li class="breadcrumb-item"><a href="https://www.linkedin.com/in/slobodan-ivkovic-a08326ba"><img src="Pictures/Icons/linkedin.png" alt="linkedin logo"></a></li>
+                  <li class="breadcrumb-item"><a href="https://twitter.com/slobodan_iv"><img src="Pictures/Icons/twitter.png" alt="twitter logo"></a></li>
+                  <li class="breadcrumb-item"><a href="https://www.youtube.com/user/Mickijedini"><img src="Pictures/Icons/youtube.png" alt="youtube logo"></a></li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- container -->
+
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script> -->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>-->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
