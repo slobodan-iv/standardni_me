@@ -89,12 +89,27 @@
               <div class="accordion-item">
                 <h2 class="accordion-header" id="crtez_lezaja">
                   <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_crtez_lezaja" aria-expanded="true" aria-controls="collapse_crtez_lezaja">
-                    Цртеж:
+                    Цртежи:
                   </button>
                 </h2>
                 <div id="collapse_crtez_lezaja" class="accordion-collapse collapse show" aria-labelledby="crtez_lezaja" data-bs-parent="#modeliranje_lezaja">
                   <div class="accordion-body">
-                    <img src="Pictures/Crtezi/30306.jpg" width="100%" alt="Цртеж лежаја">
+                    <ul class="nav nav-tabs" id="crtezi_tab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="crtez_sklopa-tab" data-bs-toggle="tab" data-bs-target="#crtez_sklopa" type="button" role="tab" aria-controls="crtez_sklopa" aria-selected="true">Склопни</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="crtez_rastavljenog_sklopa-tab" data-bs-toggle="tab" data-bs-target="#crtez_rastavljenog_sklopa" type="button" role="tab" aria-controls="crtez_rastavljenog_sklopa" aria-selected="true">Растављени поглед склопа</button>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="crtezi_TabContent">
+                      <div class="tab-pane show active" id="crtez_sklopa" role="tabpanel" aria-labelledby="crtez_sklopa-tab">
+                        <img src="Pictures/Crtezi/30306.jpg" width="100%" alt="Цртеж лежаја">
+                      </div>
+                      <div class="tab-pane" id="crtez_rastavljenog_sklopa" role="tabpanel" aria-labelledby="crtez_rastavljenog_sklopa-tab">
+                        <img src="Pictures/Crtezi/30306_exploded_view.jpg" width="100%" alt="Цртеж лежаја у растављеном погледу">
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -118,8 +133,33 @@
                 </h2>
                 <div id="collapse_mic_lezaja" class="accordion-collapse collapse" aria-labelledby="mic_lezaja" data-bs-parent="#modeliranje_lezaja">
                   <div class="accordion-body">
-                    <div class="card ratio ratio-16x9">
-                      <iframe width="560" height="315" src="https://www.youtube.com/embed/ZpfuLkRXytA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <ul class="nav nav-tabs" id="modeliranje_tab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="modeliranje_sklopa-tab" data-bs-toggle="tab" data-bs-target="#modeliranje_sklopa" type="button" role="tab" aria-controls="modeliranje_sklopa" aria-selected="true">Склоп</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="modeliranje_rastavljenog_sklopa-tab" data-bs-toggle="tab" data-bs-target="#modeliranje_rastavljenog_sklopa" type="button" role="tab" aria-controls="modeliranje_rastavljenog_sklopa" aria-selected="true">Растављени поглед склопа</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="izrada_crteza_rastavljenog_sklopa-tab" data-bs-toggle="tab" data-bs-target="#izrada_crteza_rastavljenog_sklopa" type="button" role="tab" aria-controls="izrada_crteza_rastavljenog_sklopa" aria-selected="true">Цртеж растављеног склопа</button>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="modeliranje_TabContent">
+                      <div class="tab-pane show active" id="modeliranje_sklopa" role="tabpanel" aria-labelledby="modeliranje_sklopa-tab">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/ZpfuLkRXytA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                      <div class="tab-pane" id="modeliranje_rastavljenog_sklopa" role="tabpanel" aria-labelledby="modeliranje_rastavljenog_sklopa-tab">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/0a-fvCRioVA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                      <div class="tab-pane" id="izrada_crteza_rastavljenog_sklopa" role="tabpanel" aria-labelledby="izrada_crteza_rastavljenog_sklopa-tab">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/hvtcWpYSKow" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
